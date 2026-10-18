@@ -1,0 +1,8 @@
+
+⚠️  [1;31m[Sentinel Block][0m Running loose scripts directly in ~ is barred.
+💡 Redirecting execution context to Workspace Root...
+::ffff:127.0.0.1 - - [16/Jun/2026 03:52:39] "GET /buttscorp_map.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [16/Jun/2026 03:52:40] code 404, message File not found
+::ffff:127.0.0.1 - - [16/Jun/2026 03:52:40] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [16/Jun/2026 05:04:43] code 404, message File not found
+::ffff:127.0.0.1 - - [16/Jun/2026 05:04:43] "GET /favicon.ico HTTP/1.1" 404 -

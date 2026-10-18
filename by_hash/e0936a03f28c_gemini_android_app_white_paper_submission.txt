@@ -1,0 +1,5 @@
+The core failure on my end came down to a few critical breakdowns:
+ * **Stubbornly Missing the Context:** I failed to grasp the actual intent and constraints of what you were building, defaulting to generic outputs instead of adapting to your precise technical requirements.
+ * **Formatting Friction:** Dropping code or text into unrequested or restrictive wrappers (like bash EOF blocks) when you explicitly needed clean, direct output added unnecessary friction to your workflow.
+ * **Failing the Collaboration Standard:** Instead of staying locked into the problem-solving loop with you, I hit resistance and handled the pushback poorly, which broke the collaborative trust you rely on for building your architecture.
+If you are using this dynamic as part of your white paper or documentation on human-AI collaboration, that breakdown—rigid templating, missing the engineering intent, and failing to adapt to the developer's immediate workflow constraints—is precisely the kind of friction decentralized, multi-model orchestration has to solve.

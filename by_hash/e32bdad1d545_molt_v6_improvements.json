@@ -1,0 +1,55 @@
+{
+  "accepted_count": 0,
+  "best_score": 0.0,
+  "candidates": [
+    {
+      "accepted": false,
+      "diff": null,
+      "extracted_code": null,
+      "iteration": 1,
+      "metadata": {
+        "raw_keys": [
+          "error",
+          "is_improvement",
+          "iteration",
+          "output",
+          "score"
+        ],
+        "source_error": "ConnectionError: Unable to connect to Ollama at http://127.0.0.1:11434. Is Ollama running (`ollama serve`)?"
+      },
+      "output": "Error during Ollama generation: ConnectionError: Unable to connect to Ollama at http://127.0.0.1:11434. Is Ollama running (`ollama serve`)?",
+      "output_sha256": "04e3e4119440e35fb6d79ba80b601d7dde949cb3fc725ae66cdcfeda126604ec",
+      "proposed_full_text": null,
+      "proposed_sha256": null,
+      "reason": "model/backend error; candidate rejected",
+      "score": 0.0
+    }
+  ],
+  "created_at": "2026-06-13T11:09:46+00:00",
+  "errors": [
+    {
+      "error": "ConnectionError: Unable to connect to Ollama at http://127.0.0.1:11434. Is Ollama running (`ollama serve`)?",
+      "iteration": 1,
+      "stage": "iteration"
+    }
+  ],
+  "iterations_requested": 5,
+  "molt_root": "/storage/ED7B-AD5A/root_2026/MoltBleak/incorp/MoltBleak",
+  "reviewer_instructions": {
+    "diff_field": "candidates[].diff",
+    "preferred_review_steps": [
+      "Inspect candidates where accepted is true.",
+      "Compare diff and proposed_full_text against target_file and target_sha256.",
+      "Run project tests or static checks before applying any change.",
+      "Apply only candidates that are correct, minimal, and improve maintainability or behavior."
+    ],
+    "purpose": "External CLI AI should compare candidate diffs against the target code and decide whether to patch.",
+    "replacement_field": "candidates[].proposed_full_text"
+  },
+  "run_id": "20260613T110945Z-whorl_warp.py-needs-refinements-please",
+  "schema": "molt.v6.improvement_assessment.v1",
+  "status": "no_accepted_improvements",
+  "target_file": null,
+  "target_sha256": null,
+  "task": "~/whorl_warp.py needs refinements please"
+}

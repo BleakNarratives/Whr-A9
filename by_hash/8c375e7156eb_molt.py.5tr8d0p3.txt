@@ -1,0 +1,109 @@
+==================================================
+5TR8D0P3 DOCUMENTATION FILE
+SOURCE FILE: molt.py
+FULL PATH: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/molt.py
+==================================================
+
+[INTENT AND PURPOSE (THE FEET)]
+#!/usr/bin/env python3
+
+[FUNCTIONAL BREAKDOWN]
+
+--- class Molt:
+Base path is the root directory where molt.py is located
+self.base_path = Path(__file__).parent
+self.config = self._load_config()
+
+OllamaClient initialization uses config values
+self.ollama = OllamaClient(
+host=self.config.get('ollama_host', 'http://127.0.0.1:11434'),
+model=self.config.get('model', 'deepseek-r1:1.5b')
+)
+self.iterator = MoltIterator(self.ollama)
+Memory initialization path adjusted to reflect new structure within src
+self.memory = ImprovementMemory(self.base_path / 'src/memory')
+self.renderer = TreeRenderer()  Internal visualization
+
+def _load_config(self):
+Load config from src/config
+config_path = self.base_path / 'src/config/config.json'
+if config_path.exists():
+try:
+with open(config_path) as f:
+return json.load(f)
+except json.JSONDecodeError:
+print(f"Error: Could not decode JSON from {config_path}. Using defaults.")
+return {}
+
+Fallback or default config if file not found
+print(f"Warning: Config file not found at {config_path}. Using defaults.")
+return {
+'ollama_host': 'http://127.0.0.1:11434',
+'model': 'deepseek-r1:1.5b',
+'default_iterations': 5  Example default
+}
+
+def run(self, task: str, max_iterations: Optional[int] = None) -> Dict:
+"""Run molt on a task with tree visualization (internal) and return best result."""
+
+--- def __init__(self):
+Base path is the root directory where molt.py is located
+self.base_path = Path(__file__).parent
+self.config = self._load_config()
+
+OllamaClient initialization uses config values
+self.ollama = OllamaClient(
+host=self.config.get('ollama_host', 'http://127.0.0.1:11434'),
+model=self.config.get('model', 'deepseek-r1:1.5b')
+)
+self.iterator = MoltIterator(self.ollama)
+Memory initialization path adjusted to reflect new structure within src
+self.memory = ImprovementMemory(self.base_path / 'src/memory')
+self.renderer = TreeRenderer()  Internal visualization
+
+def _load_config(self):
+Load config from src/config
+config_path = self.base_path / 'src/config/config.json'
+if config_path.exists():
+try:
+with open(config_path) as f:
+return json.load(f)
+except json.JSONDecodeError:
+print(f"Error: Could not decode JSON from {config_path}. Using defaults.")
+return {}
+
+Fallback or default config if file not found
+print(f"Warning: Config file not found at {config_path}. Using defaults.")
+return {
+'ollama_host': 'http://127.0.0.1:11434',
+'model': 'deepseek-r1:1.5b',
+'default_iterations': 5  Example default
+}
+
+def run(self, task: str, max_iterations: Optional[int] = None) -> Dict:
+"""Run molt on a task with tree visualization (internal) and return best result."""
+
+--- def _load_config(self):
+Load config from src/config
+config_path = self.base_path / 'src/config/config.json'
+if config_path.exists():
+try:
+with open(config_path) as f:
+return json.load(f)
+except json.JSONDecodeError:
+print(f"Error: Could not decode JSON from {config_path}. Using defaults.")
+return {}
+
+Fallback or default config if file not found
+print(f"Warning: Config file not found at {config_path}. Using defaults.")
+return {
+'ollama_host': 'http://127.0.0.1:11434',
+'model': 'deepseek-r1:1.5b',
+'default_iterations': 5  Example default
+}
+
+def run(self, task: str, max_iterations: Optional[int] = None) -> Dict:
+"""Run molt on a task with tree visualization (internal) and return best result."""
+
+--- def run(self, task: str, max_iterations: Optional[int] = None) -> Dict:
+"""Run molt on a task with tree visualization (internal) and return best result."""

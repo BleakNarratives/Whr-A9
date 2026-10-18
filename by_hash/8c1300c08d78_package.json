@@ -1,0 +1,46 @@
+{
+  "name": "equilex-dev-tools",
+  "displayName": "EquiLex Dev Tools",
+  "description": "A starter VS Code extension for EquiLex Android developer compliance commands.",
+  "version": "0.0.1",
+  "publisher": "equilex",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:equilex.generatePrivacyPolicy",
+    "onCommand:equilex.validateTOS",
+    "onCommand:equilex.openCopilotGuide"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "equilex.generatePrivacyPolicy",
+        "title": "EquiLex: Generate Privacy Policy"
+      },
+      {
+        "command": "equilex.validateTOS",
+        "title": "EquiLex: Validate TOS Structure"
+      },
+      {
+        "command": "equilex.openCopilotGuide",
+        "title": "EquiLex: Open Copilot Integration Guide"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.5.0",
+    "vscode": "^1.80.0"
+  }
+}

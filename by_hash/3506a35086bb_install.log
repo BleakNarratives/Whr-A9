@@ -1,0 +1,58 @@
+2026-05-15 05:06:45 Script starting, user configuration: port=18789, Token=HighFives26!, autostart=n
+2026-05-15 05:06:45 Starting basic environment check
+2026-05-15 05:06:45 Executing pkg update
+2026-05-15 05:06:45 Executing command: pkg
+2026-05-15 05:06:49 Executing command: touch
+2026-05-15 05:06:49 pkg update completed
+2026-05-15 05:06:49 Missing dependencies: openssh tmux termux-api termux-tools golang which build-essential
+2026-05-15 05:06:49 Executing command: pkg
+2026-05-15 05:06:53 Executing command: pkg
+2026-05-15 05:07:29 Dependencies installed successfully
+2026-05-15 05:07:29 Node.js version: v24.14.1
+2026-05-15 05:07:30 Node.js version check passed: 24
+2026-05-15 05:07:30 Starting NPM configuration
+2026-05-15 05:07:31 Creating Termux compatibility directories
+2026-05-15 05:07:31 Configuring git HTTPS
+2026-05-15 05:07:31 Configuring GYP environment
+2026-05-15 05:07:31 Checking Openclaw installation status
+2026-05-15 05:07:31 Starting Openclaw installation
+2026-05-15 05:07:31 Executing command: env
+2026-05-15 05:08:57 Openclaw installation completed
+2026-05-15 05:09:01 Creating openclaw wrapper script
+2026-05-15 05:09:01 Applying koffi stub
+2026-05-15 05:09:01 koffi stub applied successfully
+2026-05-15 05:09:01 Starting patch application
+2026-05-15 05:09:01 Searching and fixing all hardcoded /tmp/openclaw paths
+2026-05-15 05:09:02 Found files needing fixes
+2026-05-15 05:09:02 Fixing file: dist/plugin-sdk/agent-runtime-test-contracts.js
+2026-05-15 05:09:03 Fixing file: dist/plugin-sdk/channel-test-helpers.js
+2026-05-15 05:09:03 Fixing file: dist/plugin-sdk/src/infra/tmp-openclaw-dir.d.ts
+2026-05-15 05:09:03 Fixing file: dist/browser-cli-5WTX7pUu.js
+2026-05-15 05:09:03 Fixing file: dist/browser-cli-actions-input-CvMx06o5.js
+2026-05-15 05:09:04 Fixing file: dist/browser-cli-debug-C_xOuyiz.js
+2026-05-15 05:09:04 Fixing file: dist/config-CHem-I24.js
+2026-05-15 05:09:04 Fixing file: dist/doctor-platform-notes-CkvhSSth.js
+2026-05-15 05:09:04 Fixing file: dist/config-BNHBQmxW.js
+2026-05-15 05:09:05 Fixing file: dist/cli-startup-metadata.json
+2026-05-15 05:09:05 Fixing file: dist/tmp-openclaw-dir-Bek3eNKb.d.ts
+2026-05-15 05:09:05 Fixing file: dist/tmp-openclaw-dir-C5ctwRKD.js
+2026-05-15 05:09:06 All files fixed successfully
+2026-05-15 05:09:06 Patch verification successful, all paths replaced
+2026-05-15 05:09:06 Searching and fixing hardcoded /bin/npm paths
+2026-05-15 05:09:07 No files found containing /bin/npm
+2026-05-15 05:09:07 Applying clipboard patch
+2026-05-15 05:09:07 Clipboard patch applied successfully
+2026-05-15 05:09:07 Checking and fixing openclaw executable shebang
+2026-05-15 05:09:07 openclaw shebang does not need fixing
+2026-05-15 05:09:07 Configuring environment variables and aliases
+2026-05-15 05:09:07 Executing command: cp
+2026-05-15 05:09:07 Executing command: sed
+2026-05-15 05:09:07 Skipping autostart (only writing aliases and environment variables)
+2026-05-15 05:09:07 Aliases and environment variables configuration completed
+2026-05-15 05:09:07 Activating wake lock
+2026-05-15 05:09:10 Wake lock activated successfully
+2026-05-15 05:09:10 Starting service
+2026-05-15 05:09:11 Service command sent
+2026-05-15 05:52:55 Updated token in openclaw.json to environment variable reference
+2026-05-15 05:52:59 Gateway restarted successfully
+2026-05-15 05:52:59 Script execution completed

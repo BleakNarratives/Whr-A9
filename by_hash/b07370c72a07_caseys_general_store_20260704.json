@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "generated": "2026-07-04T19:47:45.448039",
+    "target": {
+      "name": "Caseys General Store",
+      "vertical": "retail",
+      "location": "Wellington, KS",
+      "source": "local_intel"
+    },
+    "package_type": "investment_intelligence"
+  },
+  "signal": {
+    "headline": "Caseys General Store \u2014 local_intel reconnaissance",
+    "body": "Scheduled sweep for Caseys General Store (retail) in Wellington, KS. Data source: local_intel.",
+    "action": "Review pitch package",
+    "region": "Wellington, KS"
+  },
+  "pitch": {
+    "hook": "Caseys General Store is losing money every day without this.",
+    "situation": "Analysis of Caseys General Store indicates market opportunity.",
+    "risk": "Competition may respond quickly.",
+    "fix": "Deploy AI automation for Caseys General Store.",
+    "ask": "Schedule 20-minute demo.",
+    "cost": "$249/month setup included",
+    "guarantee": "If no ROI in 30 days, full refund."
+  },
+  "shareholder_summary": {
+    "investment_thesis": "Caseys General Store represents a retail opportunity in Wellington, KS.",
+    "risk_factors": [
+      "Competition may respond quickly."
+    ],
+    "recommended_action": "Schedule 20-minute demo.",
+    "estimated_entry": "$249/month setup included"
+  }
+}

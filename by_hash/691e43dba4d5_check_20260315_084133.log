@@ -1,0 +1,63 @@
+================================================
+WHORL v0.1 — Check Script
+Sun Mar 15 08:41:34 CDT 2026
+================================================
+
+-- File checks --
+  PASS : spec/whorl_spec_v0.1.whr
+  PASS : spec/whorl_spec_v0.1.md
+  PASS : spec/whorl_grammar.ebnf
+  PASS : strands/python/whorl_core.py
+  PASS : strands/bash/whorl_metal.sh
+  PASS : strands/js/whorl_eyes.js
+  PASS : strands/go/whorl_nerves.go
+  PASS : strands/lua/whorl_scout.lua
+  PASS : examples/demo.whr
+  PASS : run.sh
+  PASS : README.md
+  PASS : .gitignore
+
+-- Python syntax check --
+  PASS : whorl_core.py syntax
+
+-- Python import check --
+  PASS : import math
+  PASS : import json
+  PASS : import time
+  PASS : import uuid
+  PASS : import random
+  PASS : import dataclasses
+
+-- Python unit run (5 ticks) --
+  PASS : Python runtime 5 ticks
+  [GYM] Architect retired (fitness -1)
+[TICK 1] Agents: 1
+[TICK 2] Agents: 1
+[TICK 3] Agents: 1
+[TICK 4] Agents: 1
+[TICK 5] Agents: 1
+
+-- State file check --
+  PASS : state/whorl_state.json exists
+  PASS : state tick=5 agents=1
+
+-- Node.js check --
+  PASS : whorl_eyes.js syntax
+
+-- Bash syntax check --
+  PASS : whorl_metal.sh syntax
+  PASS : run.sh syntax
+
+-- Go check --
+  PASS : whorl_nerves.go vet
+
+-- Lua check --
+  FAIL : whorl_scout.lua -- SKIP -- dkjson not installed (luarocks install dkjson)
+
+-- .whr file check --
+  PASS : demo.whr (79 lines)
+
+================================================
+RESULTS: PASS=27  FAIL=1  SKIP=0
+Log: /storage/ED7B-AD5A/root_2026/vertical-ai-unified/whorl/state/check_20260315_084133.log
+================================================

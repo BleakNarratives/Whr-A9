@@ -1,0 +1,67 @@
+[14:30:46] === Mrs. Higgins Pipeline START ===
+[14:30:46] Mode: --dry-run | Platform: ALL
+[14:30:46] --- 1/5 Front Desk Lady ---
+[WARN] No Voltage API key. Invoices will be skipped.
+       Set voltage_api_key in front_desk_config.json or VOLTAGE_API_KEY env var.
+[LOADED] android_dev_environment.json
+[LOADED] lightning_payment_integration.json
+[LOADED] local_ai_chatbot_setup.json
+
+=== Mrs. Higgins ON DUTY [DRY RUN] — 3 package(s) ===
+
+[ROUTING] Android Dev Environment Setup
+  [DRY] → Fiverr
+  [DRY] → Upwork
+
+[ROUTING] Lightning Payment Integration
+  [DRY] → Fiverr
+  [DRY] → Upwork
+  [DRY] → Nostr
+
+[ROUTING] Local AI Chatbot Setup
+  [DRY] → Fiverr
+  [DRY] → Upwork
+
+[DONE] 7 route(s) logged → front_desk_routing_log.json
+[14:30:47] --- 2/5 Bookkeeper ---
+/storage/emulated/0/RootBase/mrs_higgins_saas/bookkeeper.py:46: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "generated_at": datetime.utcnow().isoformat() + "Z",
+  [SKIP] Android Dev Environment Setup / Fiverr — no hash
+  [SKIP] Android Dev Environment Setup / Upwork — no hash
+  [SKIP] Lightning Payment Integration / Fiverr — no hash
+  [SKIP] Lightning Payment Integration / Upwork — no hash
+  [SKIP] Lightning Payment Integration / Nostr — no hash
+  [SKIP] Local AI Chatbot Setup / Fiverr — no hash
+  [SKIP] Local AI Chatbot Setup / Upwork — no hash
+
+[DONE] settled=0 pending=0 untracked=7
+       → income_summary.json
+[14:30:47] --- 3/5 The Closer ---
+[ABORT] Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID env vars.
+[14:30:47] --- 4/5 Copywriter ---
+[COPYWRITER] model=qwen2.5:1.5b packages=3
+  [Fiverr] Android Dev Environment Setup... [DRY]
+  [Upwork] Android Dev Environment Setup... [DRY]
+  [Fiverr] Lightning Payment Integration... [DRY]
+  [Upwork] Lightning Payment Integration... [DRY]
+  [Nostr] Lightning Payment Integration... [DRY]
+  [Fiverr] Local AI Chatbot Setup... [DRY]
+  [Upwork] Local AI Chatbot Setup... [DRY]
+
+[DONE] Copy files in ./copy_output/
+[14:30:47] --- 5/5 Scout ---
+
+[SCOUT] 'Android Dev Environment Setup' — keywords: ['portable', 'full', 'real']
+  [MISS] Upwork — no match for 'Android Dev Environment Setup'
+  [MISS] Fiverr — no match for 'Android Dev Environment Setup'
+
+[SCOUT] 'Lightning Payment Integration' — keywords: ['near', 'small', 'lightning']
+  [MISS] Upwork — no match for 'Lightning Payment Integration'
+  [MISS] Fiverr — no match for 'Lightning Payment Integration'
+
+[SCOUT] 'Local AI Chatbot Setup' — keywords: ['dependency', 'leaving', 'cloud']
+  [MISS] Upwork — no match for 'Local AI Chatbot Setup'
+  [MISS] Fiverr — no match for 'Local AI Chatbot Setup'
+
+[DONE] 0 new lead(s) → scout_leads.json (total: 0)
+[14:31:21] === Pipeline COMPLETE → ./logs/run_20260522_143046.log ===

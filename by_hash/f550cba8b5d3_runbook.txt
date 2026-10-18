@@ -1,0 +1,45 @@
+cat > ~/RootBase/Janus/RUNBOOK.txt << 'EOF'
+JANUS RUNBOOK — Operational Procedures
+=======================================
+
+QUICKSTART
+----------
+$ cd ~/RootBase/Janus
+$ python3 core/janus_system.py   # Full ignition sequence
+$ python3 smoke_test.py          # Test all layers
+
+DAILY OPERATIONS
+----------------
+1. Check system health:
+   $ python3 -c "from core.janus_system import JanusSystem; s=JanusSystem(); print(s.system_report())"
+
+2. Seed new agent:
+   $ python3 -c "from core.janus_system import JanusSystem; s=JanusSystem(); print(s.new_agent_ritual('agent_name'))"
+
+3. Run derby round:
+   $ python3 -c "from plugins.derby import Derby; d=Derby(); print(d.get_leaderboard())"
+
+4. View park rides:
+   $ python3 -c "from plugins.amusement_park import AmusementPark; p=AmusementPark(); print(p.get_park_summary())"
+
+TROUBLESHOOTING
+---------------
+- Supabase 404: Run SQL schema in dashboard (see WHO_DID_WHAT.md)
+- Supabase 409: Whorl key already exists; use unique keys or upsert fallback (built-in now)
+- Import errors: Ensure PYTHONPATH includes ~/RootBase/Janus or sys.path.insert(0) in scripts
+- NetworkX missing: Loom falls back to internal graph; install with `pip install networkx` for full features
+
+ENTROPY SOURCES (for Quantum Derby)
+------------------------------------
+- Moon phase: https://api.farmsense.net/v1/moonphases/?d=<timestamp> (free, no key)
+- Blockchain height: https://blockchain.info/q/getblockcount (free, no key)
+- Atmospheric noise: https://www.random.org/integers/... (free tier)
+
+SECURITY NOTES
+--------------
+- .env contains Supabase keys; never commit
+- Trap registry gates all capability escalations
+- Sessions stored locally in registry/sessions/
+- Loom graph is local JSON; for production, migrate to Neo4j
+
+EOF

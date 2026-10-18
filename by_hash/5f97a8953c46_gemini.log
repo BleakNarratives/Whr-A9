@@ -1,0 +1,38 @@
+Ripgrep is not available. Falling back to GrepTool.
+[ContextManager] Hot start calibration failed Error: exception AbortError: This operation was aborted sending request
+    at file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263866:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BaseLlmClient.countTokens (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:305068:21)
+    at async ContextManager.performHotStartCalibration (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341445:31)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341247:11
+    at async Promise.all (index 1)
+    at async ContextManager.renderHistory (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341251:5)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342278:83)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+[LocalLiteRtLmClient] Failed to generate content: Error: exception TypeError: fetch failed sending request
+    at file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263866:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Models.generateContent (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:264838:16)
+    at async LocalLiteRtLmClient.generateJson (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:349566:23)
+    at async GemmaClassifierStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:355748:28)
+    at async CompositeStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356118:26)
+    at async ModelRouterService.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356281:18)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342347:24)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+[Routing] GemmaClassifierStrategy failed: Error: exception TypeError: fetch failed sending request
+    at file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263866:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Models.generateContent (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:264838:16)
+    at async LocalLiteRtLmClient.generateJson (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:349566:23)
+    at async GemmaClassifierStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:355748:28)
+    at async CompositeStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356118:26)
+    at async ModelRouterService.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356281:18)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342347:24)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+
+Cancelling...
+Operation cancelled.
+[ERROR] Operation cancelled.

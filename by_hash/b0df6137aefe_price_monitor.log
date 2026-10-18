@@ -1,0 +1,6 @@
+[2026-06-03 20:32:33] Ecosystem integration enabled
+[2026-06-03 20:32:33] Ecosystem integration enabled
+[2026-06-03 20:32:33] Ecosystem integration enabled
+[2026-07-11 06:32:00] Ecosystem integration enabled
+[2026-07-11 06:32:00] Ecosystem integration enabled
+[2026-07-11 06:32:00] Error fetching Example Product: HTTPSConnectionPool(host='api.example.com', port=443): Max retries exceeded with url: /products/123 (Caused by NameResolutionError("HTTPSConnection(host='api.example.com', port=443): Failed to resolve 'api.example.com' ([Errno 7] No address associated with hostname)"))

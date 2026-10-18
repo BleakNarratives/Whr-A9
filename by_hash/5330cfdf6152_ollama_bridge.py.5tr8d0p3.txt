@@ -1,0 +1,21 @@
+==================================================
+5TR8D0P3 DOCUMENTATION FILE
+SOURCE FILE: ollama_bridge.py
+FULL PATH: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/src/core/ollama_bridge.py
+==================================================
+
+[INTENT AND PURPOSE (THE FEET)]
+
+[FUNCTIONAL BREAKDOWN]
+
+--- class OllamaClient:
+"""Generate response from Ollama. Returns (response_text, error_message)."""
+
+--- def __init__(self, host: str = "http://127.0.0.1:11434", model: str = "deepseek-r1:1.5b"):
+"""Generate response from Ollama. Returns (response_text, error_message)."""
+
+--- def generate(self, prompt: str, system: Optional[str] = None, temperature: float = 0.7) -> Tuple[Optional[str], Optional[str]]:
+"""Generate response from Ollama. Returns (response_text, error_message)."""
+
+--- def test_connection(self) -> Tuple[bool, str]:
+"""Test if Ollama is running and model is available. Returns (is_connected, message)."""

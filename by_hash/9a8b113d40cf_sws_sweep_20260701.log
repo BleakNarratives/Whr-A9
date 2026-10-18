@@ -1,0 +1,69 @@
+{"timestamp": "2026-07-01 18:57:30,817", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 7183, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:30,817", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 7183, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:30,817", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 7183, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:31,090", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 7189, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:31,090", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 7189, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:31,090", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 7189, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:31,091", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 7189, "thread": "MainThread"}
+{"timestamp": "2026-07-01 18:57:32,845", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 7189, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,597", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 9291, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,599", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 9291, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,599", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 9291, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,864", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 9293, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,864", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 9293, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,864", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 9293, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:29,864", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 9293, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:31,611", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 9293, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:51,722", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 9499, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:51,723", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 9499, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:51,723", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 9499, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:52,054", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 9501, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:52,054", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 9501, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:52,054", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 9501, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:52,055", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 9501, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:00:53,764", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 9501, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:13:35,347", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:13:35,352", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:13:35,353", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:13:35,355", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:51,740", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 17391, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:51,741", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 17391, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:51,741", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 17391, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:52,082", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 17398, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:52,083", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 17398, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:52,083", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 17398, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:52,088", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep stopped", "pid": 17398, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:14:53,796", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:14,225", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 20969, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:14,234", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 20969, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:14,234", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 20969, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,379", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 21283, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,379", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 21283, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,379", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 21283, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,682", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 21284, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,683", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 21284, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,683", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 21284, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,689", "level": "ERROR", "service": "sws_sweep", "message": "Fatal start error: [Errno 98] Address already in use", "pid": 21284, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:43,694", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep stopped", "pid": 21284, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:22:45,425", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 16515, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:23:13,936", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 21833, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:23:13,941", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 21833, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:23:13,942", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 21833, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:23:13,946", "level": "ERROR", "service": "sws_sweep", "message": "Fatal start error: [Errno 98] Address already in use", "pid": 21833, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:23:13,950", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep stopped", "pid": 21833, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:37:07,989", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 31287, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:37:07,989", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 31287, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:37:07,989", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 31287, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:37:07,990", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 31287, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:42:15,909", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 1091, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:42:15,913", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 1091, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:42:15,914", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 1091, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:42:15,914", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 1091, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:43:44,023", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 2711, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:43:44,028", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 2711, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:43:44,029", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 2711, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:43:44,030", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep stopped", "pid": 2711, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:44:59,764", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 4667, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:44:59,770", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 4667, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:44:59,770", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 4667, "thread": "MainThread"}
+{"timestamp": "2026-07-01 19:44:59,771", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 4667, "thread": "MainThread"}

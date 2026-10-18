@@ -1,0 +1,29 @@
+[BOARDROOM] WebSocket server starting on ws://0.0.0.0:8765
+[BOARDROOM] Model: qwen2.5:1.5b
+[BOARDROOM] Ollama: http://localhost:11434/api/generate
+[BOARDROOM] Ready. Waiting for connections...
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/ws_server.py", line 212, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/home/ws_server.py", line 207, in main
+    async with websockets.serve(handler, WS_HOST, WS_PORT):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/websockets/asyncio/server.py", line 829, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/websockets/asyncio/server.py", line 847, in __await_impl__
+    server = await self.create_server
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/asyncio/base_events.py", line 1641, in create_server
+    raise OSError(err.errno, msg) from None
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 8765): [errno 98] address already in use

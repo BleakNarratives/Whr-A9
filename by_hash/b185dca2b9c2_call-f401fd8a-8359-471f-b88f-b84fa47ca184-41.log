@@ -1,0 +1,123 @@
+================================================================
+  ATTNY BREAKFAST — OUTCLAW LIGHTWEIGHT DUNK PACK
+================================================================
+NOT LEGAL ADVICE. Educational / structural research tool only. No attorney-client relationship. Verify everything against primary law and competent counsel.
+
+MATTER: Warrantless entry under color of badge; protected speech retaliation; oath on file
+3 live theory(ies) survive the element gate; 1 die on missing elements. Counsel's 'nothing here' line is breakfast cereal.
+Multi-blade spar complete: text, cross, close, story, malfeasance. Comfort narratives that skip record + statute + duty do not survive breakfast.
+LIVE THEORIES ON THE TABLE: 1983, 242, OATH_BREACH
+If opposing counsel says 'no claim,' make them walk each missing element on the record — or watch the theory stay live.
+RECORD HITS: retaliation, procedural_defenses, administrative_breaches, civil_rights_1983, fourth_amendment
+Immunity / good-faith / discretion language spotted — treat as contested fact, not a shield.
+PRESSURE: Demand the exact clause granting power; deny freestanding policy justifications.
+PRESSURE: Pin every official statement against body-cam, dispatch, docket, and prior sworn words.
+PRESSURE: Walk motive, means, opportunity, and color-of-law chain without apology.
+PRESSURE: Open with the right taken, the actor who took it, and the power they wore.
+PRESSURE: Separate discretionary judgment from non-discretionary mandates; document the bypass.
+
+-- NEXT MOVES --
+  1. Lock primary sources: statute text, oath/commission, duty manual, contemporaneous logs.
+  2. Build a one-page timeline: act → actor → power worn → right hit → record cite.
+  3. Draft anti-gaslight system prompt from local anchors only (no polite hedge language).
+  4. Stage § 1983 complaint skeleton: actors, capacity, rights, damages, prayer.
+  5. Locate bond / administrative grievance path for oath-breach track.
+  6. Immunity brief: clearly-established right + willfulness packet.
+
+No Laptop. No team. No fixed address. No problem.
+================================================================
+==== JSON smoke ====
+{
+  "meta": {
+    "pack": "attny_breakfast",
+    "generated_utc": "2026-07-30T23:23:29.507801+00:00",
+    "disclaimer": "NOT LEGAL ADVICE. Educational / structural research tool only. No attorney-client relationship. Verify everything against primary law and competent counsel.",
+    "tagline": "No Laptop. No team. No fixed address. No problem."
+  },
+  "matter": "Warrantless entry under color of badge; protected speech retaliation; oath on file",
+  "element_gate": {
+    "live_theories": [
+      {
+        "claim": "1983",
+        "can_happen": true,
+        "verdict": "[CAN HAPPEN]",
+        "remedy_or_bar": "Federal civil action under 42 U.S.C. \u00a7 1983 is element-complete.",
+        "missing": []
+      },
+      {
+        "claim": "242",
+        "can_happen": true,
+        "verdict": "[CAN HAPPEN]",
+        "remedy_or_bar": "18 U.S.C. \u00a7 242 color-of-law deprivation theory is element-complete.",
+        "missing": []
+      },
+      {
+        "claim": "oath_breach",
+        "can_happen": true,
+        "verdict": "[CAN HAPPEN]",
+        "remedy_or_bar": "Administrative/statutory oath-breach liability is element-complete.",
+        "missing": []
+      }
+    ],
+    "barred_theories": [
+      {
+        "claim": "241",
+        "can_happen": false,
+        "verdict": "[CANNOT HAPPEN]",
+        "remedy_or_bar": "Barred \u2014 missing: two_or_more, conspire_rights",
+        "missing": [
+          "two_or_more",
+==== spar module ====
+{
+  "model": "TestModel",
+  "label": "TestModel",
+  "reaction": "Legal analysis for Civil Rights Litigation by TestModel. Adversarial analysis under persona 'TestModel'.",
+  "disagreements": [
+    "Opposing narrative fails to tether each act to a specific lawful grant of authority."
+  ],
+  "gaps": [
+    "Requires more discovery material.",
+    "Need primary record for: Civil Rights Litigation",
+    "Need oath/commission, duty manual excerpt, and contemporaneous logs."
+  ],
+  "attack_line": "Force the opposing narrative to cite record, statute, and duty \u2014 or fold.",
+  "statutes_hint": [
+    "42 U.S.C. \u00a7 1983",
+    "18 U.S.C. \u00a7 241",
+    "18 U.S.C. \u00a7 242",
+    "U.S. Const. amend. IV / XIV"
+  ]
+}
+==== zip lightweight package ====
+  adding: attny_breakfast/ (stored 0%)
+  adding: attny_breakfast/core/ (stored 0%)
+  adding: attny_breakfast/core/__init__.py (deflated 47%)
+  adding: attny_breakfast/core/brief.py (deflated 62%)
+  adding: attny_breakfast/core/predicates.py (deflated 66%)
+  adding: attny_breakfast/core/patterns.py (deflated 58%)
+  adding: attny_breakfast/core/spar.py (deflated 58%)
+  adding: attny_breakfast/fixtures/ (stored 0%)
+  adding: attny_breakfast/fixtures/sample_record.txt (deflated 36%)
+  adding: attny_breakfast/dunk.py (deflated 60%)
+  adding: attny_breakfast/README.md (deflated 39%)
+-rw-rw----. 1 u0_a233 media_rw 11K Jul 30 18:23 attny_breakfast.zip
+Archive:  attny_breakfast.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2026-07-30 18:23   attny_breakfast/
+        0  2026-07-30 18:23   attny_breakfast/core/
+      350  2026-07-30 18:23   attny_breakfast/core/__init__.py
+     5353  2026-07-30 18:23   attny_breakfast/core/brief.py
+     3120  2026-07-30 18:23   attny_breakfast/core/predicates.py
+     2308  2026-07-30 18:23   attny_breakfast/core/patterns.py
+     3577  2026-07-30 18:23   attny_breakfast/core/spar.py
+        0  2026-07-30 18:23   attny_breakfast/fixtures/
+      884  2026-07-30 18:23   attny_breakfast/fixtures/sample_record.txt
+     3081  2026-07-30 18:23   attny_breakfast/dunk.py
+     1240  2026-07-30 18:23   attny_breakfast/README.md
+---------                     -------
+    19913                     11 files
+==== sizes ====
+86K	attny_breakfast
+12K	attny_breakfast.zip
+1.1M	/storage/emulated/0/RootBase/src/OutClaw/OutClaw

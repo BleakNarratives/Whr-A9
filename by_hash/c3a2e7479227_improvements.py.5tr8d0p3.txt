@@ -1,0 +1,39 @@
+==================================================
+5TR8D0P3 DOCUMENTATION FILE
+SOURCE FILE: improvements.py
+FULL PATH: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/src/memory/improvements.py
+==================================================
+
+[INTENT AND PURPOSE (THE FEET)]
+
+[FUNCTIONAL BREAKDOWN]
+
+--- class ImprovementMemory:
+"""Load improvement database"""
+
+--- def __init__(self, memory_path: Path):
+"""Load improvement database"""
+
+--- def _load_db(self) -> Dict:
+"""Load improvement database"""
+
+--- def _save_db(self):
+"""Save improvement database"""
+
+--- def store(self, task: str, result: Dict):
+"""Store an improvement"""
+
+--- def get_best(self, task: str) -> Optional[Dict]:
+"""Get best result for a task"""
+
+--- def get_history(self, task: str) -> List[Dict]:
+"""Get full history for a task"""
+
+--- def _task_key(self, task: str) -> str:
+"""Generate key from task"""
+
+--- def list_tasks(self) -> List[str]:
+"""List all stored tasks"""
+
+--- def export_best(self, output_dir: Path):
+"""Export all best results to files"""

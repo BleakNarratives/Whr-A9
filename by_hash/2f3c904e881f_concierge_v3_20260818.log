@@ -1,0 +1,20 @@
+{"timestamp": "2026-08-18 05:41:08,326", "level": "INFO", "service": "concierge_v3", "message": "ConciergeV3 initialized", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,326", "level": "INFO", "service": "concierge_v3", "message": "Directory validated: /storage/emulated/0/RootBase/investment_scanner", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,327", "level": "INFO", "service": "concierge_v3", "message": "Directory validated: /storage/emulated/0/RootBase/data_scouts", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,330", "level": "INFO", "service": "concierge_v3", "message": "Directory validated: /storage/emulated/0/RootBase/config", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,336", "level": "INFO", "service": "concierge_v3", "message": "Loaded 2 trigger rules", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,336", "level": "INFO", "service": "concierge_v3", "message": "Sweep config: {'sws_port': 5006, 'healing_port': 5007, 'vibe_listener_port': 5008, 'auto_route_horizon': True, 'auto_route_unknown': False}", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,336", "level": "INFO", "service": "concierge_v3", "message": "Fallback rules: ['horizon_indicators', 'default']", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,340", "level": "INFO", "service": "concierge_v3", "message": "Processing Horizon signal: priority_horizon", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,340", "level": "INFO", "service": "concierge_v3", "message": "ACTIVE HARVEST triggered for target: commodity_index", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,343", "level": "INFO", "service": "concierge_v3", "message": "Loaded 2 trigger rules", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,343", "level": "INFO", "service": "concierge_v3", "message": "Sweep config: {'sws_port': 5006, 'healing_port': 5007, 'vibe_listener_port': 5008, 'auto_route_horizon': True, 'auto_route_unknown': False}", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,343", "level": "INFO", "service": "concierge_v3", "message": "Fallback rules: ['horizon_indicators', 'default']", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,343", "level": "INFO", "service": "concierge_v3", "message": "Using fallback routing for priority_horizon", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,344", "level": "INFO", "service": "concierge_v3", "message": "Fallback match: priority_horizon -> horizon_indicators (pattern: *horizon*)", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,344", "level": "INFO", "service": "concierge_v3", "message": "Routing to SWS sweep on port 5006: commodity_index", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,359", "level": "INFO", "service": "concierge_v3", "message": "SWS sweep routing successful: {'status': 'routed_to_sws', 'payload_id': 'commodity_index', 'port': 5006, 'timestamp': '2026-08-18T05:41:08.359627'}", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,360", "level": "INFO", "service": "concierge_v3", "message": "Routing to Vibe listener on port 5008: commodity_index", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,361", "level": "INFO", "service": "concierge_v3", "message": "Vibe listener routing successful: {'status': 'routed_to_vibe', 'payload_id': 'commodity_index', 'port': 5008, 'timestamp': '2026-08-18T05:41:08.361073'}", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,361", "level": "INFO", "service": "concierge_v3", "message": "Routing payload to SwarmBus: commodity_index", "pid": 6730, "thread": "MainThread"}
+{"timestamp": "2026-08-18 05:41:08,361", "level": "INFO", "service": "concierge_v3", "message": "SwarmBus ingest successful: {'status': 'routed', 'payload_id': 'commodity_index', 'timestamp': '2026-08-18T05:41:08.361523'}", "pid": 6730, "thread": "MainThread"}

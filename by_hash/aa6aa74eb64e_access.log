@@ -1,0 +1,2 @@
+{"timestamp": "2026-06-24T08:17:58.997666Z", "action": "STORE", "key_name": "test_api_key", "platform": "test", "user": "unknown"}
+{"timestamp": "2026-06-24T08:17:58.999820Z", "action": "RETRIEVE_CACHE", "key_name": "test_api_key", "platform": null, "user": "unknown"}

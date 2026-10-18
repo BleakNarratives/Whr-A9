@@ -1,0 +1,37 @@
+{
+  "use_multi_backend": true,
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_model": "deepseek-r1:1.5b",
+  "mistral_enabled": false,
+  "gemini_enabled": true,
+  "default_iterations": 3,
+  "temperature": 0.7,
+  "ui_theme": "tree",
+  "log_level": "INFO",
+  
+  "guardrails": {
+    "allowed_directories": [
+      "/storage/ED7B-AD5A/root_2026",
+      "~/molt",
+      "~/code_city"
+    ],
+    "blocked_operations": [
+      "rm -rf /",
+      "dd if=",
+      "mkfs"
+    ],
+    "require_confirmation": [
+      "delete",
+      "remove",
+      "drop database"
+    ],
+    "max_file_size_mb": 10,
+    "network_timeout": 180
+  },
+  
+  "code_city_integration": {
+    "enabled": true,
+    "visualization_path": "/storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/code_city",
+    "auto_generate": true
+  }
+}

@@ -1,0 +1,54 @@
+==================================================
+5TR8D0P3 DOCUMENTATION FILE
+SOURCE FILE: render.py
+FULL PATH: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/src/ui/render.py
+==================================================
+
+[INTENT AND PURPOSE (THE FEET)]
+
+[FUNCTIONAL BREAKDOWN]
+
+--- class TreeRenderer:
+"""Clear terminal"""
+
+--- def __init__(self):
+"""Clear terminal"""
+
+--- def clear(self):
+"""Clear terminal"""
+
+--- def plant_seed(self, task: str):
+"""Show initial seed/task"""
+
+--- def show_growth_ring(self, iteration: int):
+"""Show iteration number as growth ring"""
+
+--- def grow_branch(self, iteration: int, content: str, score: float):
+"""Add a branch to the tree"""
+
+--- def bloom_leaf(self, iteration: int):
+"""Mark an improvement with a blooming leaf"""
+
+--- def show_canopy(self):
+"""Show final tree canopy"""
+
+--- def _print_centered(self, text: str):
+"""Print centered text"""
+
+--- class OrganicRenderer:
+"""Alternative renderer - more abstract/organic"""
+
+--- def __init__(self):
+"""Render organic growth pattern"""
+
+--- def render_growth(self, iteration: int, data: dict):
+"""Render organic growth pattern"""
+
+--- class SpiralRenderer:
+"""Spiral output renderer - text curves outward"""
+
+--- def __init__(self, center_x: int = 40, center_y: int = 12):
+"""Print text in spiral pattern"""
+
+--- def spiral_print(self, text: str):
+"""Print text in spiral pattern"""

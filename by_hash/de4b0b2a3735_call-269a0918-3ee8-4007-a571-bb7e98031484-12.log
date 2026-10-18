@@ -1,0 +1,61 @@
+   721854 2026-07-27 10:41:56.963000000 outclaw_full.zip
+   357659 2026-07-27 10:31:20.195000000 outclaw.zip
+LOCAL:
+-rw-rw----. 1 u0_a233 media_rw 357659 Jul 27 05:31 /storage/emulated/0/RootBase/src/OutClaw/outclaw.zip
+Downloading...
+Transferred:            0 / 1, 0%
+Elapsed time:         0.5s
+Transferring:
+ *                              outclaw_full.zip: transferringTransferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         1.0s
+Transferring:
+ *                              outclaw_full.zip: transferringTransferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         1.5s
+Transferring:
+ *                              outclaw_full.zip: transferringTransferred:   	       32 KiB / 704.936 KiB, 5%, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         2.0s
+Transferring:
+ *                              outclaw_full.zip:  4% / 704.936 KiB, 0 B/s, -Transferred:   	  704.936 KiB / 704.936 KiB, 100%, 0 B/s, ETA -
+Transferred:            1 / 1, 100%
+Elapsed time:         2.5sTransferred:   	  704.936 KiB / 704.936 KiB, 100%, 0 B/s, ETA -
+Transferred:            1 / 1, 100%
+Elapsed time:         2.5s
+Transferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Elapsed time:         0.0sTransferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         0.4s
+Transferring:
+ *                                   outclaw.zip: transferringTransferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         0.9s
+Transferring:
+ *                                   outclaw.zip: transferringTransferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         1.4s
+Transferring:
+ *                                   outclaw.zip: transferringTransferred:   	       64 KiB / 349.276 KiB, 18%, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         1.9s
+Transferring:
+ *                                   outclaw.zip: 18% / 349.276 KiB, 0 B/s, -Transferred:   	  349.276 KiB / 349.276 KiB, 100%, 0 B/s, ETA -
+Transferred:            1 / 1, 100%
+Elapsed time:         2.2s
+2026/07/29 04:16:40 NOTICE: cloud: This remote uses rclone's shared Google Drive client_id, which is being retired and will stop working during 2026. Create your own client_id to avoid interruption: https://rclone.org/drive/#making-your-own-client-id
+Transferred:   	          0 B / 0 B, -, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         0.0s
+Transferring:
+ *                                   outclaw.zip: transferringTransferred:   	          0 B / 349.276 KiB, 0%, 0 B/s, ETA -
+Transferred:            0 / 1, 0%
+Elapsed time:         0.5s
+Transferring:
+ *                                   outclaw.zip:  0% / 349.276 KiB, 0 B/s, -Transferred:   	  349.276 KiB / 349.276 KiB, 100%, 0 B/s, ETA -
+Transferred:            1 / 1, 100%
+Elapsed time:         0.8s
+total 1.4M
+-rw-rw----. 1 u0_a233 media_rw 350K Jul 27 05:31 outclaw.zip
+-rw-rw----. 1 u0_a233 media_rw 705K Jul 27 05:41 outclaw_full.zip
+-rw-rw----. 1 u0_a233 media_rw 350K Jul 27 05:31 outclaw_nested.zip

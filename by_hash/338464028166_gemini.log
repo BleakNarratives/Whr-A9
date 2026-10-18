@@ -1,0 +1,61 @@
+Ripgrep is not available. Falling back to GrepTool.
+[ContextManager] Hot start calibration failed _ApiError: {"error":{"code":404,"message":"models/context-calibrator is not found for API version v1beta, or is not supported for countTokens. Call ModelService.ListModels to see the list of available models and their supported methods.","status":"NOT_FOUND"}}
+    at throwErrorIfNotOK (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:264028:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263779:7
+    at async BaseLlmClient.countTokens (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:305068:21)
+    at async ContextManager.performHotStartCalibration (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341445:31)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341247:11
+    at async Promise.all (index 1)
+    at async ContextManager.renderHistory (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:341251:5)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342278:83)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14) {
+  status: 404
+}
+[LocalLiteRtLmClient] Failed to generate content: Error: exception TypeError: fetch failed sending request
+    at file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263866:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Models.generateContent (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:264838:16)
+    at async LocalLiteRtLmClient.generateJson (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:349566:23)
+    at async GemmaClassifierStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:355748:28)
+    at async CompositeStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356118:26)
+    at async ModelRouterService.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356281:18)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342347:24)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+[Routing] GemmaClassifierStrategy failed: Error: exception TypeError: fetch failed sending request
+    at file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:263866:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Models.generateContent (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:264838:16)
+    at async LocalLiteRtLmClient.generateJson (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:349566:23)
+    at async GemmaClassifierStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:355748:28)
+    at async CompositeStrategy.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356118:26)
+    at async ModelRouterService.route (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:356281:18)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342347:24)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+Error when talking to Gemini API Full report available at: /data/data/com.termux/files/home/tmp/gemini-client-error-Turn.run-sendMessageStream-2026-06-17T05-37-19-698Z.json TerminalQuotaError: You have exhausted your daily quota on this model.
+    at classifyGoogleError (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:304189:16)
+    at retryWithBackoff (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:304874:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:328315:28)
+    at async GeminiChat.streamWithRetries (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:328133:29)
+    at async Turn.run (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:328879:24)
+    at async GeminiClient.processTurn (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342369:22)
+    at async GeminiClient.sendMessageStream (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/chunk-RCJSF5RP.js:342466:14)
+    at async file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:10882:26
+    at async main (file:///data/data/com.termux/files/home/.npm-global/lib/node_modules/@google/gemini-cli/bundle/gemini-YXO2QQ66.js:16290:5) {
+  cause: {
+    code: 429,
+    message: 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n' +
+      'Please retry in 40.29551234s.',
+    details: [ [Object], [Object], [Object] ]
+  },
+  retryDelayMs: undefined,
+  reason: undefined
+}
+An unexpected critical error occurred:[object Object]

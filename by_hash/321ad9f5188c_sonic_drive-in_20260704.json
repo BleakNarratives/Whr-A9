@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "generated": "2026-07-04T19:47:48.082100",
+    "target": {
+      "name": "Sonic Drive-In",
+      "vertical": "restaurant",
+      "location": "Wellington, KS",
+      "source": "local_intel"
+    },
+    "package_type": "investment_intelligence"
+  },
+  "signal": {
+    "headline": "Sonic Drive-In \u2014 local_intel reconnaissance",
+    "body": "Scheduled sweep for Sonic Drive-In (restaurant) in Wellington, KS. Data source: local_intel.",
+    "action": "Review pitch package",
+    "region": "Wellington, KS"
+  },
+  "pitch": {
+    "hook": "Sonic Drive-In is losing money every day without this.",
+    "situation": "Analysis of Sonic Drive-In indicates market opportunity.",
+    "risk": "Competition may respond quickly.",
+    "fix": "Deploy AI automation for Sonic Drive-In.",
+    "ask": "Schedule 20-minute demo.",
+    "cost": "$249/month setup included",
+    "guarantee": "If no ROI in 30 days, full refund."
+  },
+  "shareholder_summary": {
+    "investment_thesis": "Sonic Drive-In represents a restaurant opportunity in Wellington, KS.",
+    "risk_factors": [
+      "Competition may respond quickly."
+    ],
+    "recommended_action": "Schedule 20-minute demo.",
+    "estimated_entry": "$249/month setup included"
+  }
+}

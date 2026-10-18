@@ -1,0 +1,57 @@
+py live 38
+py full 38
+ONLY FULL PY none
+ONLY LIVE PY none
+PYC without PY source in FULL: ['model_spar_simulator']
+Those missing from LIVE too: ['model_spar_simulator']
+==== Search cloud for more outclaw-ish names ====
+outclaw_full.zip
+outclaw/
+outclaw/outclaw.zip
+AskHole-V-3.tar.gz
+CodeMentor_MVP.tar.gz
+Codementor-SaaS.tar.gz
+Ecosystem_Expansion.tar.gz
+Ecosystem_Expansion_Batch2.tar.gz
+Implore.tar.gz
+Mrs-Higgins-SaaS-Unified.tar.gz
+UnifiedCodeCity.tar.gz
+ingest_packages/
+concierge/
+shared/
+shared/model_feed/
+concierge/.git/
+concierge/README.md
+concierge/concierge.py
+concierge/concierge_trigger_watch2.py
+concierge/get_key_and_fix.py
+concierge/get_key_and_fix2.py
+concierge/logs/
+concierge/trigger_watch.py
+==== sample size diffs ====
+outclaw_engine.py: 2059 /storage/emulated/0/RootBase/src/OutClaw/OutClaw/outclaw_engine.py
+2059 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/outclaw_engine.py
+4118 total
+outclaw_orchestrator.py: 29842 /storage/emulated/0/RootBase/src/OutClaw/OutClaw/outclaw_orchestrator.py
+29842 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/outclaw_orchestrator.py
+59684 total
+predicate_core.py: 2168 /storage/emulated/0/RootBase/src/OutClaw/OutClaw/predicate_core.py
+2168 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/predicate_core.py
+4336 total
+ui_engine.py:  605 /storage/emulated/0/RootBase/src/OutClaw/OutClaw/ui_engine.py
+ 605 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/ui_engine.py
+1210 total
+constitutional_core.py: 19009 /storage/emulated/0/RootBase/src/OutClaw/OutClaw/constitutional_core.py
+19009 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/constitutional_core.py
+38018 total
+engine IDENTICAL
+==== path inventory ====
+--: line 71: /tmp/full_files.txt: Permission denied
+--: line 72: /tmp/live_files.txt: Permission denied
+--: line 73: /tmp/full_files.txt: No such file or directory
+--: line 73: /tmp/live_files.txt: No such file or directory
+full  live 
+only full:
+comm: /tmp/full_files.txt: No such file or directory
+only live:
+comm: /tmp/full_files.txt: No such file or directory

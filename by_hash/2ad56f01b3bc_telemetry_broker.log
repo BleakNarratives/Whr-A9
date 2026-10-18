@@ -1,0 +1,11 @@
+nohup: ignoring input
+2026-06-26 21:41:39,722 - INFO - Broker listening on port 5006
+2026-06-26 21:41:39,722 - INFO - Telemetry Broker operational.
+2026-06-26 21:41:39,834 - INFO - [✓] Received Native JSON Telemetry from ('127.0.0.1', 34901): {'node_id': 'thoth_agent_stress_test_01', 'cognitive_load': 0.99, 'status': 'CRITICAL_ANOMALY'}
+2026-06-26 22:32:34,344 - INFO - [✓] Received Native JSON Telemetry from ('127.0.0.1', 49605): {'node_id': 'thoth_agent_stress_test_01', 'cognitive_load': 0.99, 'status': 'CRITICAL_ANOMALY'}
+2026-06-26 22:35:07,364 - INFO - [✓] Received Native JSON Telemetry from ('127.0.0.1', 40379): {'node_id': 'thoth_agent_stress_test_01', 'cognitive_load': 0.99, 'status': 'CRITICAL_ANOMALY'}
+nohup: ignoring input
+2026-06-26 22:37:19,854 - INFO - Broker listening on port 5006
+2026-06-26 22:37:19,858 - INFO - Telemetry Broker operational.
+2026-06-26 22:37:27,252 - INFO - [✓] JSON telemetry from ('127.0.0.1', 50297): {'node_id': 'thoth_agent_stress_test_01', 'cognitive_load': 0.99, 'status': 'CRITICAL_ANOMALY'}
+2026-06-26 22:37:27,255 - INFO - Forwarded thoth_agent_stress_test_01 telemetry to healing engine

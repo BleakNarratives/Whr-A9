@@ -1,0 +1,8 @@
+.env
+*.log
+__pycache__/
+*.pyc
+.janus/state.json
+.janus/sediment.log
+*.key
+*.secret

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Dashboard</title>
+    <style>
+        :root {
+            --primary-bg: #1a1a1d;
+            --secondary-bg: #0b0c10;
+            --accent-color: #66fcf1;
+            --text-color: #c5c6c7;
+            --border-color: #45a29e;
+            --card-bg: #2a2a2e;
+            --hover-color: #00bcd4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background-color: var(--accent-color);
+            color: var(--secondary-bg);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2em;
+            z-index: 1001;
+        }
+
+        .sidebar-toggle.shifted {
+            left: 260px; /* Adjust if sidebar is open */
+        }
+
+        .sidebar h2 {
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: var(--border-color);
+            color: var(--secondary-bg);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            margin-left: 250px; /* Space for sidebar */
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        .main-content.sidebar-hidden {
+            margin-left: 0;
+        }
+
+        header {
+            background-color: var(--secondary-bg);
+            padding: 1rem 20px;
+            border-bottom: 2px solid var(--accent-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--accent-color);
+            font-size: 2.5em;
+            letter-spacing: 0.1em;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .data-display {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--hover-color);
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .action-button {
+            background-color: var(--accent-color);
+            color: var(--secondary-bg);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s ease;
+            display: block;
+            width: fit-content;
+            margin-top: 15px;
+        }
+
+        .action-button:hover {
+            background-color: var(--hover-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: var(--text-color);
+            border-top: 1px solid var(--border-color);
+            background-color: var(--secondary-bg);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+                transform: translateX(-100%);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .sidebar-toggle.shifted {
+                left: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+        <h2>OpenClaw</h2>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-section="overview">Overview</a></li>
+                <li><a href="#" data-section="analytics">Analytics</a></li>
+                <li><a href="#" data-section="reports">Reports</a></li>
+                <li><a href="#" data-section="settings">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-content" id="mainContent">
+        <header>
+            <h1>OpenClaw Dashboard</h1>
+        </header>
+
+        <section id="overview" class="dashboard-section">
+            <h2>System Overview</h2>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3>Active Cases</h3>
+                    <p class="data-display" id="activeCases">Loading...</p>
+                    <p>Currently monitoring various legal matters.</p>
+                    <button class="action-button">View Cases</button>
+                </div>
+                <div class="card">
+                    <h3>Flagged Documents</h3>
+                    <p class="data-display" id="flaggedDocs">Loading...</p>
+                    <p>Documents requiring immediate review due to detected patterns.</p>
+                    <button class="action-button">Review Flags</button>
+                </div>
+                <div class="card">
+                    <h3>Processing Queue</h3>
+                    <p class="data-display" id="processingQueue">Loading...</p>
+                    <p>Number of documents awaiting AI analysis.</p>
+                    <button class="action-button">Manage Queue</button>
+                </div>
+                <div class="card">
+                    <h3>User Activity</h3>
+                    <p class="data-display" id="userActivity">Loading...</p>
+                    <p>Recent interactions and system usage.</p>
+                    <button class="action-button">Audit Logs</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="analytics" class="dashboard-section" style="display: none;">
+            <h2>Advanced Analytics</h2>
+            <div class="card">
+                <h3>Pattern Detection Trends</h3>
+                <p>Visual representation of emerging legal patterns and anomalies.</p>
+                <div style="height: 200px; background-color: #3a3a40; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                    <p><em>Placeholder for Chart/Graph</em></p>
+                </div>
+                <button class="action-button">Generate Report</button>
+            </div>
+        </section>
+
+        <section id="reports" class="dashboard-section" style="display: none;">
+            <h2>Generated Reports</h2>
+            <div class="card">
+                <h3>Recent Analysis Reports</h3>
+                <ul>
+                    <li>Report_2025-04-19_CaseX.pdf <button class="action-button" style="display: inline-block; margin-left: 10px;">Download</button></li>
+                    <li>Report_2025-04-18_FOIA_Response.md <button class="action-button" style="display: inline-block; margin-left: 10px;">Download</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="settings" class="dashboard-section" style="display: none;">
+            <h2>System Settings</h2>
+            <div class="card">
+                <h3>API Key Management</h3>
+                <p>Manage your API keys for external integrations.</p>
+                <input type="text" placeholder="********************" style="width: 80%; padding: 8px; margin-bottom: 10px; background-color: #3a3a40; border: 1px solid var(--border-color); color: var(--text-color);">
+                <button class="action-button">Update Key</button>
+            </div>
+            <div class="card">
+                <h3>Rule Engine Configuration</h3>
+                <p>Customize red-flag detection rules and thresholds.</p>
+                <button class="action-button">Edit Rules</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 OpenClaw. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+            const sections = document.querySelectorAll('.dashboard-section');
+
+            // Initial state for sidebar (visible by default on larger screens)
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('hidden');
+                mainContent.classList.remove('sidebar-hidden');
+                sidebarToggle.classList.add('shifted');
+            } else {
+                sidebar.classList.add('hidden');
+                mainContent.classList.add('sidebar-hidden');
+                sidebarToggle.classList.remove('shifted');
+            }
+
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('hidden');
+                mainContent.classList.toggle('sidebar-hidden');
+                sidebarToggle.classList.toggle('shifted');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSectionId = e.target.dataset.section;
+
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    sections.forEach(section => {
+                        if (section.id === targetSectionId) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    // Hide sidebar on mobile after selection
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.add('hidden');
+                        mainContent.classList.remove('sidebar-hidden'); // Ensure content shifts back
+                        sidebarToggle.classList.remove('shifted');
+                    }
+                });
+            });
+
+            // Simulate data loading
+            setTimeout(() => {
+                document.getElementById('activeCases').textContent = '12';
+                document.getElementById('flaggedDocs').textContent = '5';
+                document.getElementById('processingQueue').textContent = '27';
+                document.getElementById('userActivity').textContent = 'High';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

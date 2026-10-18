@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "jobs": []
+}==MOLT.PY==
+cat: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/openclaw/molt/molt.py: No such file or directory
+==OPENCLAW.JSON==
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/dolphin-phi:2.7b"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "api": "ollama",
+        "apiKey": "ollama-local",
+        "baseUrl": "http://127.0.0.1:11434",
+        "models": [
+          {
+            "contextWindow": 2048,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "dolphin-phi:2.7b",
+            "input": [
+              "text"
+            ],
+            "name": "dolphin-phi:2.7b"
+          }
+        ]
+      }
+    }
+  }
+}

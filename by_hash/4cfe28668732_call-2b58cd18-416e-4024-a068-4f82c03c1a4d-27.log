@@ -1,0 +1,73 @@
+=== NUKE NO-DIFF / GHOST JUNK ===
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/scout_swarm/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/tests/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/.event_bus/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/docs/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/tutorials/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/templates/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/data/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/exports/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/backups/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/study/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/agents/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/arena/data/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/arena/scripts/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/arena/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/StagedChunks/MANIFEST.json
+/storage/emulated/0/RootBase/src/OutClaw/OutClaw/sentinel/MANIFEST.json
+=== AFTER NUKE ===
+1.1M	/storage/emulated/0/RootBase/src/OutClaw/OutClaw
+16M	/storage/emulated/0/RootBase/src/OutClaw
+LEGAL_ASSASSIN_MANIFESTO.md
+QRD.md
+README.md
+SWARM_STATUS.md
+StagedChunks
+WHO_DID_WHAT.md
+accountability_filter.py
+agents
+arena
+backups
+bar_grievance_engine.py
+bleak_playbook.py
+bundle_splitter.py
+case_analysis_output.json
+case_db_core.py
+case_matrix.db
+claw_boardroom.py
+constitutional_core.py
+copy_pasta_blocks.md
+data
+docs
+event_bus.py
+exports
+external_pipeline.py
+family_advocacy.py
+index.html
+ingest_govt_manual.py
+interactive_guide.py
+legacy_engines.py
+legal_maxims.py
+mandatory_language_parser.py
+mel_template.txt
+notarial_protest.py
+orchestrator.py
+outclaw_boardroom_core.py
+outclaw_engine.py
+outclaw_manifesto.md
+outclaw_orchestrator.py
+outclaw_roadmap.mermaid
+outclaw_validator.py
+predicate_core.py
+preload_constitutional_titans.py
+preload_liability_matrix.py
+preload_title18.py
+prose_tactics_library.py
+rebuttal_engine.py
+scout_matrix.json
+scout_swarm
+sentinel
+smoke_test.py
+_ingest_stage: GONE
+outclaw.zip: GONE
+RECOVERED dump: GONE

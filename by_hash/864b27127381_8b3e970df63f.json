@@ -1,0 +1,19 @@
+{
+  "ride_id": "8b3e970df63f",
+  "ride_type": "haunted_house",
+  "name": "Ghost Dependency Finder",
+  "description": "A spooky script that finds imports that exist in the codebase but aren't listed in any manifest or requirements.",
+  "code": "#!/usr/bin/env python3\n\"\"\"Haunted House: Ghost Dependencies\"\"\"\nimport ast, os\nfrom pathlib import Path\n\nroot = Path(os.path.expanduser(\"~/RootBase/Janus\"))\ndeclared = set()\nfor item in root.rglob(\"*.py\"):\n    if \"__pycache__\" not in str(item):\n        try:\n            tree = ast.parse(item.read_text())\n            for node in ast.walk(tree):\n                if isinstance(node, ast.Import):\n                    for alias in node.names:\n                        declared.add(alias.name.split(\".\")[0])\n                elif isinstance(node, ast.ImportFrom):\n                    if node.module:\n                        declared.add(node.module.split(\".\")[0])\n        except:\n            pass\n\nprint(\"\ud83d\udc7b GHOST DEPENDENCIES\")\nprint(\"=\" * 30)\nfor dep in sorted(declared):\n    print(f\"  \ud83d\udd6f\ufe0f {dep}\")\nprint(f\"\\nFound {len(declared)} spirits haunting the codebase.\")\n",
+  "target_file": "ghost_finder.py",
+  "agent_id": "claude",
+  "session_id": "park_seed",
+  "status": "approved",
+  "scores": {
+    "creativity": 0.25,
+    "safety": 1.0,
+    "integration": 0.0,
+    "utility": 0.0
+  },
+  "created_at": "2026-06-30T06:17:43.168791+00:00",
+  "total_score": 1.25
+}

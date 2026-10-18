@@ -1,0 +1,207 @@
+=== Mrs. Higgins Run: 2026-06-29_05-15-09 ===
+
+[LOADED] ai_workforce_integration.json
+[LOADED] askhole.json
+[LOADED] askhole_ai.json
+[LOADED] code_city_apocalypse.json
+[LOADED] code_city_blue_beta.json
+[LOADED] code_mentor_mvp.json
+[LOADED] code_mentor_pro.json
+[LOADED] codementor_saas.json
+[LOADED] commercial_ai_analyst.json
+[LOADED] hotseat.json
+[LOADED] implore_grant_intelligence.json
+[LOADED] market_scout.json
+[LOADED] molt_engine.json
+[LOADED] new_saas_platform.json
+[LOADED] pain_point_automation.json
+[LOADED] passive_income_swarm.json
+[LOADED] pytch.json
+[LOADED] shepherd_jebus.json
+[LOADED] syntax_ai_cli.json
+[LOADED] truthsleuth.json
+[LOADED] ude.json
+[LOADED] vertical_ai.json
+[LOADED] zeroclaw_android.json
+
+=== Mrs. Higgins ON DUTY [LIVE] — 23 package(s) ===
+
+[ROUTING] AI Workforce Integration Consultancy
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → LinkedIn
+  [OK] → Consulting
+
+[ROUTING] AskHole
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+
+[ROUTING] AskHole AI Assistant
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Code City Apocalypse Scanner
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Code City Blue Beta Access
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] CodeMentor MVP
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → GitHub
+
+[ROUTING] CodeMentor Pro
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] CodeMentor SaaS
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → GitHub
+
+[ROUTING] Commercial AI Business Analyst
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → Consulting firms
+
+[ROUTING] HotSeat
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Implore Grant Intelligence
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct/Government
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → Foundations
+
+[ROUTING] MarketScout
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → Direct
+
+[ROUTING] Molt Automation Engine
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Upwork
+
+[ROUTING] New SaaS Platform
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+
+[ROUTING] Pain Point Solution Automation Engine
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → SaaS marketplaces
+
+[ROUTING] Passive Income Swarm
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [OK] → Direct/Email
+
+[ROUTING] Pytch
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct/On-device
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+  [OK] → Gumroad
+
+[ROUTING] Shepherd (JEBUS)
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct/On-device
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Syntax AI CLI
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Upwork
+
+[ROUTING] TruthSleuth Static Analysis Auditor
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+
+[ROUTING] UDE
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct/On-device
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Vertical AI
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Upwork
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+
+[ROUTING] ZeroClaw Android
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Direct/On-device
+  [OK] → Nostr
+  [NOSTR ERR] No module named 'nostr_poster'
+
+[DONE] 67 route(s) logged → front_desk_routing_log.json

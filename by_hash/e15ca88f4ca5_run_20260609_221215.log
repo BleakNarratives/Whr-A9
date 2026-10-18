@@ -1,0 +1,5 @@
+[22:12:15] === Mrs. Higgins Pipeline START ===
+[22:12:15] Mode: LIVE | Platform: ALL
+[22:12:15] --- 1/5 Front Desk Lady ---
+python: can't open file '/storage/emulated/0/RootBase/front_desk_lady.py': [Errno 2] No such file or directory
+[22:12:15] FATAL: front_desk_lady.py failed

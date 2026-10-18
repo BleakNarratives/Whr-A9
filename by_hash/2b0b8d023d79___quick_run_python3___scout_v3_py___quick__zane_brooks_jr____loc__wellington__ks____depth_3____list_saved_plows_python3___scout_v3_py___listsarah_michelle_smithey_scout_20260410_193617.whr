@@ -1,0 +1,27 @@
+WHORL VERSION 0.1
+
+SPAWN #_Quick_runpython3_~/scout_v3.py_--quick_"Zane_Brooks_Jr"_--loc_"Wellington,_KS"_--depth_3#_List_saved_plowspython3_~/scout_v3.py_--listSarah_Michelle_Smithey_node AT 32
+LEARN #_Quick_runpython3_~/scout_v3.py_--quick_"Zane_Brooks_Jr"_--loc_"Wellington,_KS"_--depth_3#_List_saved_plowspython3_~/scout_v3.py_--listSarah_Michelle_Smithey_node
+
+# Source: social
+SPAWN social_signal AT 16
+OBSERVE social_signal AT 0 -> AMPLITUDE, PHASE
+
+# Source: professional
+SPAWN professional_signal AT 16
+OBSERVE professional_signal AT 0 -> AMPLITUDE, PHASE
+
+# Source: media
+SPAWN media_signal AT 16
+OBSERVE media_signal AT 0 -> AMPLITUDE, PHASE
+
+# Source: relationships
+SPAWN relationships_signal AT 16
+OBSERVE relationships_signal AT 0 -> AMPLITUDE, PHASE
+
+# Source: media_artifacts
+SPAWN media_artifacts_signal AT 16
+OBSERVE media_artifacts_signal AT 0 -> AMPLITUDE, PHASE
+
+OBSERVE #_Quick_runpython3_~/scout_v3.py_--quick_"Zane_Brooks_Jr"_--loc_"Wellington,_KS"_--depth_3#_List_saved_plowspython3_~/scout_v3.py_--listSarah_Michelle_Smithey_node AT 64 -> AMPLITUDE, PHASE
+# Confidence: 0.0

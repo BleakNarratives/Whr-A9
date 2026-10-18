@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "generated": "2026-07-04T19:47:50.323586",
+    "target": {
+      "name": "Polaris of Wichita",
+      "vertical": "auto_dealer",
+      "location": "Wichita, KS",
+      "source": "regional_intel"
+    },
+    "package_type": "investment_intelligence"
+  },
+  "signal": {
+    "headline": "Polaris of Wichita \u2014 regional_intel reconnaissance",
+    "body": "Scheduled sweep for Polaris of Wichita (auto_dealer) in Wichita, KS. Data source: regional_intel.",
+    "action": "Review pitch package",
+    "region": "Wichita, KS"
+  },
+  "pitch": {
+    "hook": "Polaris of Wichita is losing money every day without this.",
+    "situation": "Analysis of Polaris of Wichita indicates market opportunity.",
+    "risk": "Competition may respond quickly.",
+    "fix": "Deploy AI automation for Polaris of Wichita.",
+    "ask": "Schedule 20-minute demo.",
+    "cost": "$249/month setup included",
+    "guarantee": "If no ROI in 30 days, full refund."
+  },
+  "shareholder_summary": {
+    "investment_thesis": "Polaris of Wichita represents a auto_dealer opportunity in Wichita, KS.",
+    "risk_factors": [
+      "Competition may respond quickly."
+    ],
+    "recommended_action": "Schedule 20-minute demo.",
+    "estimated_entry": "$249/month setup included"
+  }
+}

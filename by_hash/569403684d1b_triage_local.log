@@ -1,0 +1,14 @@
+=== TRIAGE Tue May  5 20:55:19 CDT 2026 ===
+  OK: /data/data/com.termux/files/home/autodna/engine.py
+  OK: /data/data/com.termux/files/home/bin/pancho.sh
+  OK: /data/data/com.termux/files/home/bin/codemate
+  OK: /data/data/com.termux/files/home/GREENROOM_HANDOFF.md
+  DEAD: listener.py
+  DEAD: ws_server.py
+  DEAD: webhook_server.py
+  ? -> /storage/ED7B-AD5A/root_2026/Mrs-Higgins/saas_packages/android_dev_environment.json
+  ? -> /storage/ED7B-AD5A/root_2026/Mrs-Higgins/saas_packages/lightning_payment_integration.json
+  ? -> /storage/ED7B-AD5A/root_2026/Mrs-Higgins/saas_packages/local_ai_chatbot_setup.json
+3.3G	/data/data/com.termux/files/home/~
+1.1G	/data/data/com.termux/files/home/.ollama
+280M	/data/data/com.termux/files/home/root_2025

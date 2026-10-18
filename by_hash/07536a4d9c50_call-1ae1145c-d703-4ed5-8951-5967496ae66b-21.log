@@ -1,0 +1,198 @@
+12
+12
+MANIFEST.json
+README.md
+scout_boies_depo_securities.json
+scout_boies_depo_tax.json
+scout_bugliosi_close_immunity.json
+scout_bugliosi_close_oath.json
+scout_finch_unyielding_truth.json
+scout_goodman_procedural_chaos.json
+scout_mcmillan_tx_malfeasance.json
+scout_scalia_text_warrantless.json
+scout_spence_open_1983.json
+scout_spence_open_conspiracy.json
+---
+DIFF_EXIT=0
+=== DISASSEMBLY ===
+  0           RESUME                   0
+
+  1           LOAD_SMALL_INT           0
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (json)
+              STORE_NAME               0 (json)
+
+  3           LOAD_BUILD_CLASS
+              PUSH_NULL
+              LOAD_CONST               2 (<code object ModelSparSimulator at 0x7e56fa1830, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 3>)
+              MAKE_FUNCTION
+              LOAD_CONST               3 ('ModelSparSimulator')
+              CALL                     2
+              STORE_NAME               1 (ModelSparSimulator)
+
+ 15           LOAD_NAME                2 (__name__)
+              LOAD_CONST               4 ('__main__')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       52 (to L1)
+              NOT_TAKEN
+
+ 16           LOAD_NAME                1 (ModelSparSimulator)
+              PUSH_NULL
+              LOAD_CONST               5 ('TestModel')
+              CALL                     1
+              STORE_NAME               3 (simulator)
+
+ 17           LOAD_NAME                4 (print)
+              PUSH_NULL
+              LOAD_NAME                0 (json)
+              LOAD_ATTR               10 (dumps)
+              PUSH_NULL
+              LOAD_NAME                3 (simulator)
+              LOAD_ATTR               13 (simulate_reaction + NULL|self)
+              LOAD_CONST               6 ('Civil Rights Litigation')
+              CALL                     1
+              LOAD_SMALL_INT           2
+              LOAD_CONST               7 (('indent',))
+              CALL_KW                  2
+              CALL                     1
+              POP_TOP
+              LOAD_CONST               1 (None)
+              RETURN_VALUE
+
+ 15   L1:     LOAD_CONST               1 (None)
+              RETURN_VALUE
+
+Disassembly of <code object ModelSparSimulator at 0x7e56fa1830, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 3>:
+  --           MAKE_CELL                0 (__classdict__)
+
+   3           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('ModelSparSimulator')
+               STORE_NAME               2 (__qualname__)
+               LOAD_SMALL_INT           3
+               STORE_NAME               3 (__firstlineno__)
+               LOAD_LOCALS
+               STORE_DEREF              0 (__classdict__)
+
+   4           LOAD_CONST               1 (<code object __init__ at 0x7e579873c0, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 4>)
+               MAKE_FUNCTION
+               STORE_NAME               4 (__init__)
+
+   7           LOAD_CONST               2 (<code object simulate_reaction at 0x7e57967870, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 7>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (simulate_reaction)
+               LOAD_CONST               3 (('model_name',))
+               STORE_NAME               6 (__static_attributes__)
+               LOAD_FAST_BORROW         0 (__classdict__)
+               STORE_NAME               7 (__classdictcell__)
+               LOAD_CONST               4 (None)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x7e579873c0, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 4>:
+  4           RESUME                   0
+
+  5           LOAD_FAST_BORROW_LOAD_FAST_BORROW 16 (model_name, self)
+              STORE_ATTR               0 (model_name)
+              LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+Disassembly of <code object simulate_reaction at 0x7e57967870, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 7>:
+  7           RESUME                   0
+
+  9           LOAD_CONST               0 ('model')
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                0 (model_name)
+
+ 10           LOAD_CONST               1 ('reaction')
+              LOAD_CONST               2 ('Legal analysis for ')
+              LOAD_FAST_BORROW         1 (target)
+              FORMAT_SIMPLE
+              LOAD_CONST               3 (' by ')
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                0 (model_name)
+              FORMAT_SIMPLE
+              LOAD_CONST               4 ('.')
+              BUILD_STRING             5
+
+ 11           LOAD_CONST               5 ('disagreements')
+              LOAD_CONST               6 ('None')
+              BUILD_LIST               1
+
+ 12           LOAD_CONST               7 ('gaps')
+              LOAD_CONST               8 ('Requires more discovery material.')
+              BUILD_LIST               1
+
+  8           BUILD_MAP                4
+              RETURN_VALUE
+=== CONSTS ===
+0 0
+1 None
+2 CODE ModelSparSimulator
+  --           MAKE_CELL                0 (__classdict__)
+
+   3           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('ModelSparSimulator')
+               STORE_NAME               2 (__qualname__)
+               LOAD_SMALL_INT           3
+               STORE_NAME               3 (__firstlineno__)
+               LOAD_LOCALS
+               STORE_DEREF              0 (__classdict__)
+
+   4           LOAD_CONST               1 (<code object __init__ at 0x7e579873c0, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 4>)
+               MAKE_FUNCTION
+               STORE_NAME               4 (__init__)
+
+   7           LOAD_CONST               2 (<code object simulate_reaction at 0x7e57967870, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 7>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (simulate_reaction)
+               LOAD_CONST               3 (('model_name',))
+               STORE_NAME               6 (__static_attributes__)
+               LOAD_FAST_BORROW         0 (__classdict__)
+               STORE_NAME               7 (__classdictcell__)
+               LOAD_CONST               4 (None)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x7e579873c0, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 4>:
+  4           RESUME                   0
+
+  5           LOAD_FAST_BORROW_LOAD_FAST_BORROW 16 (model_name, self)
+              STORE_ATTR               0 (model_name)
+              LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+Disassembly of <code object simulate_reaction at 0x7e57967870, file "/storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py", line 7>:
+  7           RESUME                   0
+
+  9           LOAD_CONST               0 ('model')
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                0 (model_name)
+
+ 10           LOAD_CONST               1 ('reaction')
+              LOAD_CONST               2 ('Legal analysis for ')
+              LOAD_FAST_BORROW         1 (target)
+              FORMAT_SIMPLE
+              LOAD_CONST               3 (' by ')
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                0 (model_name)
+              FORMAT_SIMPLE
+              LOAD_CONST               4 ('.')
+              BUILD_STRING             5
+
+ 11           LOAD_CONST               5 ('disagreements')
+              LOAD_CONST               6 ('None')
+              BUILD_LIST               1
+
+ 12           LOAD_CONST               7 ('gaps')
+              LOAD_CONST               8 ('Requires more discovery material.')
+              BUILD_LIST               1
+
+  8           BUILD_MAP                4
+              RETURN_VALUE
+3 'ModelSparSimulator'
+4 '__main__'
+5 'TestModel'
+6 'Civil Rights Litigation'
+7 ('indent',)

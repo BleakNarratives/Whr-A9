@@ -1,0 +1,46 @@
+## openclaw-dashboard-main
+ D OutClaw/agents/MANIFEST.json
+ D OutClaw/arena/MANIFEST.json
+ D OutClaw/arena/scripts/MANIFEST.json
+ D OutClaw/docs/MANIFEST.json
+ D OutClaw/model_spar_simulator_RECOVERED.py
+ D OutClaw/sentinel/MANIFEST.json
+ D OutClaw/study/MANIFEST.json
+ D OutClaw/templates/MANIFEST.json
+ D OutClaw/tests/MANIFEST.json
+ D OutClaw/tutorials/MANIFEST.json
+?? Melvin.txt
+?? OutClaw/model_spar_simulator.py
+?? again_but_how.md
+?? config.json
+?? grok-cli-termux-native/
+?? inspect_zips.sh
+?? logs/
+?? packages/attny_breakfast.zip
+?? patch_manifest.py
+?? prompt_loader.sh
+?? prompts/
+?? run_all.sh
+?? run_sprint.sh
+?? swarm_monitor.sh
+?? sync_downloads.sh
+?? sync_repo.sh
+?? telemetry_visualizer.py
+  main
+  master
+* openclaw-dashboard-main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+origin	https://github.com/BleakNarratives/OutClaw-Integration.git (fetch)
+origin	https://github.com/BleakNarratives/OutClaw-Integration.git (push)
+0e5de69 feat(attny): integrate attny_breakfast package, model_spar_simulator, and omni concierge logger
+4897a95 feat(ingest): injected cloud payload and recovered ghost model_spar_simulator logic
+ed7cd3c feat: add Hermes transition documentation and image
+-rw-rw----. 1 u0_a233 media_rw 10343 Jul 30 18:23 packages/attny_breakfast.zip
+
+packages/attny_breakfast:
+total 15
+-rw-rw----. 1 u0_a233 media_rw 1240 Jul 30 18:23 README.md
+drwxrws---. 3 u0_a233 media_rw 3452 Jul 30 18:23 core
+-rw-rw----. 1 u0_a233 media_rw 3081 Jul 30 18:23 dunk.py
+drwxrws---. 2 u0_a233 media_rw 3452 Jul 30 18:23 fixtures

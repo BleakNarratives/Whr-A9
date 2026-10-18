@@ -1,0 +1,13 @@
+{
+  "id": "5d71ca5a-bd5f-44bb-91d2-cd902f5d757c",
+  "sender": "WhorlCentral",
+  "recipient": "vibe",
+  "type": "status_update",
+  "priority": 0,
+  "payload": {
+    "status": "active",
+    "agent": "WhorlCentral"
+  },
+  "timestamp": "2026-06-25T08:15:12.176931",
+  "ttl": 3600
+}

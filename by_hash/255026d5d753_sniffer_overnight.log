@@ -1,0 +1,11 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/RootBase/smell_sniffer/sniffer.py", line 165, in <module>
+    main()
+    ~~~~^^
+  File "/data/data/com.termux/files/home/RootBase/smell_sniffer/sniffer.py", line 159, in main
+    results = sniffer.sniff()
+  File "/data/data/com.termux/files/home/RootBase/smell_sniffer/sniffer.py", line 31, in sniff
+    with open(self.target_path, 'r', encoding='utf-8', errors='ignore') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/storage/emulated/0/RootBase'

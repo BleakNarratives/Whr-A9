@@ -1,0 +1,11 @@
+{
+  "use_multi_backend": true,
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_model": "qwen2.5:1.5b",
+  "mistral_enabled": true,
+  "gemini_enabled": true,
+  "default_iterations": 5,
+  "temperature": 0.7,
+  "ui_theme": "tree",
+  "log_level": "INFO"
+}

@@ -1,0 +1,17 @@
+2025-07-15 01:16:49,439 - veritas - INFO - Initializing Veritas backend components
+2025-07-15 01:16:49,456 - root - INFO - Document storage directory: C:\Users\16206\AppData\Local\Temp\tmp4iqqqrqf
+2025-07-15 01:16:54,537 - root - INFO - Loaded spaCy model: en_core_web_sm
+2025-07-15 01:16:54,755 - werkzeug - WARNING -  * Debugger is active!
+2025-07-15 01:16:54,834 - werkzeug - INFO -  * Debugger PIN: 104-360-588
+2025-07-15 01:18:37,059 - werkzeug - INFO -  * Detected change in 'C:\\Users\\16206\\Desktop\\Trae_AI_Veritas\\app.py', reloading
+2025-07-15 01:19:22,212 - veritas - INFO - Initializing Veritas backend components
+2025-07-15 01:19:22,228 - root - INFO - Document storage directory: C:\Users\16206\AppData\Local\Temp\tmpsb3vf3ss
+2025-07-15 01:19:24,860 - root - INFO - Loaded spaCy model: en_core_web_sm
+2025-07-15 01:19:24,940 - werkzeug - WARNING -  * Debugger is active!
+2025-07-15 01:19:24,950 - werkzeug - INFO -  * Debugger PIN: 104-360-588
+2025-07-15 01:35:37,414 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 01:35:37] "GET /?ide_webview_request_time=1752561327817 HTTP/1.1" 200 -
+2025-07-15 01:35:43,506 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 01:35:43] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-15 01:35:43,662 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 01:35:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-07-15 02:28:32,186 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 02:28:32] "GET /?ide_webview_request_time=1752564510855 HTTP/1.1" 200 -
+2025-07-15 02:28:33,937 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 02:28:33] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-15 02:28:33,938 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 02:28:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -

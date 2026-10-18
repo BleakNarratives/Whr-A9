@@ -1,0 +1,129 @@
+{
+  "report_date": "2026-07-04T19:47:52.720954",
+  "total_opportunities": 10,
+  "by_vertical": {
+    "plumber": 1,
+    "auto_dealer": 3,
+    "bank": 1,
+    "retail": 2,
+    "restaurant": 1,
+    "general": 2
+  },
+  "by_region": {
+    "Wellington, KS": 8,
+    "Wichita, KS": 2
+  },
+  "high_priority": [],
+  "full_opportunities": [
+    {
+      "name": "Chew Plumbing",
+      "vertical": "plumber",
+      "location": "Wellington, KS",
+      "investment_thesis": "Chew Plumbing represents a plumber opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Countryside Motors",
+      "vertical": "auto_dealer",
+      "location": "Wellington, KS",
+      "investment_thesis": "Countryside Motors represents a auto_dealer opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "RCB Bank",
+      "vertical": "bank",
+      "location": "Wellington, KS",
+      "investment_thesis": "RCB Bank represents a bank opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Caseys General Store",
+      "vertical": "retail",
+      "location": "Wellington, KS",
+      "investment_thesis": "Caseys General Store represents a retail opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Jumpstart Gas Station",
+      "vertical": "retail",
+      "location": "Wellington, KS",
+      "investment_thesis": "Jumpstart Gas Station represents a retail opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Sonic Drive-In",
+      "vertical": "restaurant",
+      "location": "Wellington, KS",
+      "investment_thesis": "Sonic Drive-In represents a restaurant opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Hustler Turf",
+      "vertical": "auto_dealer",
+      "location": "Wichita, KS",
+      "investment_thesis": "Hustler Turf represents a auto_dealer opportunity in Wichita, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Polaris of Wichita",
+      "vertical": "auto_dealer",
+      "location": "Wichita, KS",
+      "investment_thesis": "Polaris of Wichita represents a auto_dealer opportunity in Wichita, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Wellington Family Dental",
+      "vertical": "general",
+      "location": "Wellington, KS",
+      "investment_thesis": "Wellington Family Dental represents a general opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    },
+    {
+      "name": "Sumner County DCF",
+      "vertical": "general",
+      "location": "Wellington, KS",
+      "investment_thesis": "Sumner County DCF represents a general opportunity in Wellington, KS.",
+      "risk_factors": [
+        "Competition may respond quickly."
+      ],
+      "recommended_action": "Schedule 20-minute demo.",
+      "estimated_entry": "$249/month setup included"
+    }
+  ]
+}

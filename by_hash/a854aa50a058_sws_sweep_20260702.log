@@ -1,0 +1,7 @@
+{"timestamp": "2026-07-02 02:34:22,731", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep initialized on port 5006", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:22,732", "level": "INFO", "service": "sws_sweep", "message": "Healing port: 5007", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:22,732", "level": "INFO", "service": "sws_sweep", "message": "Buffer size: 1000", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:22,732", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep listening on UDP port 5006", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:34,114", "level": "ERROR", "service": "sws_sweep", "message": "Listen error: 'ConciergeCore' object has no attribute 'increment_received'", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:44,587", "level": "INFO", "service": "sws_sweep", "message": "Shutting down...", "pid": 25499, "thread": "MainThread"}
+{"timestamp": "2026-07-02 02:34:44,589", "level": "INFO", "service": "sws_sweep", "message": "SWS Sweep stopped", "pid": 25499, "thread": "MainThread"}

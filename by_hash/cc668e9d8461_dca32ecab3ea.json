@@ -1,0 +1,19 @@
+{
+  "ride_id": "dca32ecab3ea",
+  "ride_type": "ferris_wheel",
+  "name": "Codebase Panorama",
+  "description": "A script that scans the entire JANUS codebase and outputs a beautiful ASCII topology map showing how all modules connect.",
+  "code": "#!/usr/bin/env python3\n\"\"\"Ferris Wheel: Codebase Panorama\"\"\"\nimport os\nfrom pathlib import Path\n\nroot = Path(os.path.expanduser(\"~/RootBase/Janus\"))\nprint(\"\ud83c\udfa1 JANUS TOPOLOGY\")\nprint(\"=\" * 40)\nfor item in sorted(root.rglob(\"*.py\")):\n    if \"__pycache__\" not in str(item):\n        depth = len(item.relative_to(root).parts)\n        indent = \"  \" * depth\n        print(f\"{indent}\u251c\u2500\u2500 {item.name}\")\nprint(\"=\" * 40)\nprint(\"\ud83c\udf10 All modules visible from the top.\")\n",
+  "target_file": "panorama.py",
+  "agent_id": "claude",
+  "session_id": "park_seed",
+  "status": "approved",
+  "scores": {
+    "creativity": 0.0,
+    "safety": 1.0,
+    "integration": 0.25,
+    "utility": 0.0
+  },
+  "created_at": "2026-06-30T04:30:09.596603+00:00",
+  "total_score": 1.25
+}

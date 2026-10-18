@@ -1,0 +1,30 @@
+2025-07-14 23:29:06,939 - coach_bleak - INFO - Initializing Coach Bleak backend components
+2025-07-14 23:29:07,087 - root - INFO - Document storage directory: C:\Users\16206\AppData\Local\Temp\tmp1umk12p8
+2025-07-14 23:29:07,095 - root - ERROR - Failed to load spaCy model en_core_web_sm: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+2025-07-14 23:29:07,097 - root - WARNING - Falling back to basic entity extraction
+2025-07-14 23:29:07,733 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-14 23:29:07,757 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-14 23:29:07,763 - werkzeug - INFO -  * Restarting with stat
+2025-07-14 23:30:16,233 - coach_bleak - INFO - Initializing Coach Bleak backend components
+2025-07-14 23:30:16,239 - root - INFO - Document storage directory: C:\Users\16206\AppData\Local\Temp\tmplo4oozkv
+2025-07-14 23:30:22,696 - root - INFO - Loaded spaCy model: en_core_web_sm
+2025-07-14 23:30:22,869 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-14 23:30:22,875 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-14 23:30:22,879 - werkzeug - INFO -  * Restarting with stat
+2025-07-14 23:30:42,694 - coach_bleak - INFO - Initializing Coach Bleak backend components
+2025-07-14 23:30:42,697 - root - INFO - Document storage directory: C:\Users\16206\AppData\Local\Temp\tmp583gocmf
+2025-07-14 23:30:48,273 - root - INFO - Loaded spaCy model: en_core_web_sm
+2025-07-14 23:30:48,654 - werkzeug - WARNING -  * Debugger is active!
+2025-07-14 23:30:48,883 - werkzeug - INFO -  * Debugger PIN: 104-360-588
+2025-07-15 00:11:18,980 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:11:18] "GET / HTTP/1.1" 200 -
+2025-07-15 00:11:24,573 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:11:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-07-15 00:11:24,626 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:11:24] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-07-15 00:11:35,971 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:11:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-15 00:50:31,848 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:50:31] "GET / HTTP/1.1" 200 -
+2025-07-15 00:50:32,582 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:50:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-07-15 00:50:32,582 - werkzeug - INFO - 127.0.0.1 - - [15/Jul/2025 00:50:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-07-15 01:16:25,585 - werkzeug - INFO -  * Detected change in 'C:\\Users\\16206\\Desktop\\Trae_AI_Veritas\\app.py', reloading
+2025-07-15 01:16:29,403 - werkzeug - INFO -  * Restarting with stat
+2025-07-15 01:18:47,668 - werkzeug - INFO -  * Restarting with stat

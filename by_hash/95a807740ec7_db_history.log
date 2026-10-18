@@ -1,0 +1,370 @@
+=== Telemetry Logging Started: Mon Jun 29 07:12:31 CDT 2026 ===
+[2026-06-29 07:12:31] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+=== Telemetry Logging Started: Mon Jun 29 07:13:06 CDT 2026 ===
+=== Telemetry Logging Started: Mon Jun 29 07:13:35 CDT 2026 ===
+=== Telemetry Logging Started: Mon Jun 29 07:23:00 CDT 2026 ===
+[2026-06-29 07:23:00] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+=== Telemetry Logging Started: Mon Jun 29 07:26:34 CDT 2026 ===
+[2026-06-29 07:26:34] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:28:00] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:31:34] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:33:01] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+=== Telemetry Logging Started: Mon Jun 29 07:34:02 CDT 2026 ===
+[2026-06-29 07:34:02] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:36:35] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:38:01] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:39:02] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+=== Telemetry Logging Started: Mon Jun 29 07:40:44 CDT 2026 ===
+[2026-06-29 07:40:44] Warning: memory.db not found at /data/data/com.termux/files/home/.RootBase/memory.db
+[2026-06-29 07:45:44] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 07:50:45] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 07:55:45] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:00:45] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:05:46] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:10:46] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:15:46] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:20:46] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:25:47] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:30:47] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:35:47] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:40:47] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:45:47] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:50:48] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 08:55:48] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:00:48] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:05:48] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:10:48] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:15:49] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:20:49] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:25:49] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:30:49] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:35:49] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:40:50] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:45:50] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:50:50] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 09:55:50] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:00:50] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:05:51] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:10:51] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:15:51] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:20:52] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:25:52] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:30:53] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:35:54] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:40:54] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-29 10:45:55] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+=== Telemetry Logging Started: Tue Jun 30 17:16:40 CDT 2026 ===
+[2026-06-30 17:16:40] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-06-30 17:21:40] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+=== Telemetry Logging Started: Tue Jul 14 09:22:01 CDT 2026 ===
+[2026-07-14 09:22:01] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:27:02] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:32:02] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:37:02] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:42:02] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:47:02] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:52:03] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 09:57:03] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:07:16] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:19:07] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:24:08] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:29:08] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:34:08] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:39:09] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:44:09] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:49:10] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:54:10] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 10:59:10] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:04:11] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:09:11] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:14:12] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:19:12] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:24:12] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:29:13] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:34:13] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:39:14] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:44:14] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:49:14] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:54:15] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 11:59:15] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:04:15] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:09:16] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:14:16] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:19:17] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:24:17] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:29:18] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:34:18] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:39:19] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:44:19] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:49:19] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:54:20] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 12:59:20] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:04:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:09:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:14:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:19:22] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:24:22] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:29:23] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:34:23] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:39:24] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:44:24] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:49:24] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:54:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 13:59:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:04:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:09:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:14:26] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:19:26] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:24:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:29:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:34:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:39:28] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:44:28] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:49:28] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:54:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 14:59:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:04:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:09:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:14:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:19:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:24:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:29:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:34:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:39:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:44:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:49:32] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:54:32] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 15:59:32] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:04:33] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:09:33] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:14:34] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:19:34] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:24:35] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:29:35] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:34:36] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:39:36] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:51:20] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 16:56:20] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:01:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:06:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:11:21] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:16:22] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:21:22] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:26:22] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:31:23] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:36:23] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:41:23] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:46:24] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:51:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 17:56:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:01:25] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:06:26] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:11:26] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:16:26] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:21:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:26:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:31:27] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:36:28] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:41:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:46:29] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:51:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 18:56:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:01:30] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:06:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:11:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:16:31] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:21:32] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:26:32] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:31:33] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:36:33] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:41:33] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:46:34] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:51:34] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 19:56:35] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:01:35] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:06:35] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:11:36] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:16:36] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:21:36] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:26:37] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:31:37] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:36:37] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 20:41:38] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 21:11:55] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 21:16:55] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions
+[2026-07-14 21:21:56] Active Sessions Snapshot:
+Parse error in 2nd command line argument: no such table: sessions

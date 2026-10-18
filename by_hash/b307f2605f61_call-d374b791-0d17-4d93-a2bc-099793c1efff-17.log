@@ -1,0 +1,9 @@
+######## FILES ONLY IN FULL (vs LIVE) ########
+######## FILES ONLY IN LIVE (vs FULL) ########
+######## CONTENT DIFFS (py/md/json/html/txt) FULL vs LIVE ########
+######## FULL vs NESTED (should be nearly identical) ########
+######## CLASSES/DEFS unique to FULL py files ########
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+  File "<frozen os>", line 709, in __getitem__
+KeyError: 'LIVE'

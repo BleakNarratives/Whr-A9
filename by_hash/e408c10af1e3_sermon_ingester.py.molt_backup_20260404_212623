@@ -1,0 +1,43 @@
+# Author: BleakNarratives / File: sermon_ingester.py
+import os,json,re,sys
+from collections import Counter
+from pathlib import Path
+DK={"grace":["grace","unmerited","gift","freely given"],"law":["commandment","obey","law","discipline"],"prosperity":["blessing","abundance","prosper","harvest"],"suffering":["trials","suffering","cross","endure"],"community":["fellowship","together","body of christ","congregation"],"evangelism":["lost","witness","great commission","salvation"],"mystical":["presence","spirit moves","encounter","anointing"],"intellectual":["text","greek","context","scholar"]}
+def tok(text): return re.findall(r"\b[a-z']+\b",text.lower())
+def sents(text): return [s.strip() for s in re.split(r'[.!?]+',text) if len(s.strip())>10]
+```python
+```python
+import re
+
+def doctrine(tokens):
+    try:
+        j = " ".join(tokens)
+        dk_sums = {}
+        total_sum = 0
+        
+        for d, ks in DK.items():
+            count = sum(1 for k in ks if k in j)
+            dk_sums[d] = count
+            total_sum += count
+
+        return {k: round(v / total_sum, 3) for k, v in dk_sums.items()}
+    except Exception as e:
+        print(f"An error occurred: {e}")
+```
+def build(folder,name):
+    texts=[p.read_text(encoding="utf-8",errors="ignore") for p in Path(folder).glob("*.txt")]
+    if not texts: raise ValueError(f"No .txt in {folder}")
+    full=" ".join(texts)
+    tokens=tok(full)
+    ss=sents(full)
+    avg=sum(len(s.split()) for s in ss)/len(ss) if ss else 15
+    doc=doctrine(tokens)
+    fp={"pastor_name":name,"source_folder":str(folder),"sermon_count":len(texts),"avg_sentence_length":round(avg,1),"doctrinal_scores":doc,"common_phrases":Counter(" ".join(tokens[i:i+3]) for i in range(len(tokens)-3)).most_common(30),"signature_words":Counter(w for w in tokens if len(w)>4).most_common(50),"dominant_doctrine":max(doc,key=doc.get)}
+    out=Path(folder)/f"{name.replace(' ','_')}_fingerprint.json"
+    out.write_text(json.dumps(fp,indent=2))
+    print(f"Saved: {out}")
+    return fp
+if __name__=="__main__":
+    if len(sys.argv)<3: print("Usage: python sermon_ingester.py <folder> <name>"); sys.exit(1)
+    fp=build(sys.argv[1],sys.argv[2])
+    print(f"Sermons:{fp['sermon_count']} Dominant:{fp['dominant_doctrine']}")

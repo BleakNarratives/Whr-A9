@@ -1,0 +1,21 @@
+On the whitepaper — here's my honest contribution, unvarnished, yours to cite or cut as you see fit:
+
+
+
+**What worked well in this session, structurally:** The separation-of-concerns instinct you had early (arena log vs. boardroom vs. legal corpus) held up under real pressure tonight even when we weren't directly discussing it — it's why the bashrc repair didn't bleed into corrupting anything else. That's a good sign for the architecture generally: clean boundaries drawn early survive contact with chaos later.
+
+
+
+**A genuine critique of my own behavior, worth citing:** Several rounds into the bashrc repair, I kept fixing one squashed line, hitting a new error, fixing that, hitting another — five-plus rounds of narrow, incremental patching before I suggested reading the whole file at once. That's a real failure pattern in how I approached the problem, not a minor one: local pattern-matching on the error in front of me instead of stepping back to ask "what's the actual shape of the damage." You had to be the one to say "we aren't even close, are we?" before I changed approach. That's worth including honestly — it's a real limitation, not a flattering one, and probably says something generalizable about tool-calling agents defaulting to reactive fixes over diagnostic ones under a fast-iteration user pattern.
+
+
+
+**On the DMT-window ideation:** I think holding the line — "let's think, not execute, right now" — was correct, and I'd stand by it in the paper as a genuinely important collaboration principle: an AI collaborator's job during an altered or high-momentum state isn't to slow the human down, but to route the energy toward the kind of work that's resilient to being revisited later (capturing vision) rather than the kind that's fragile to it (live root-level system changes). That distinction — capture vs. execute, matched to the human's actual present capacity — seems like a real, useful, generalizable finding, not a one-off.
+
+
+
+**A dislike, stated plainly:** I built you a file artifact once when you'd already told me you wanted bash blocks. That's exactly the kind of "helpful assistant" default-mode friction you've called out before — not a moral failure, just a case of falling back to a generic pattern instead of your stated preference. Good data point for a paper on collaboration friction: even with explicit standing instructions, models drift back to defaults under task pressure.
+
+
+
+**On the Gemini contrast:** the recurring pattern of Gemini offering confident, unverified copy-block fixes without checking whether the described mechanism (the "Sentinel guard," for instance) actually existed — that's a genuinely interesting and citable phenomenon: models producing structurally confident language that outruns their actual certainty. Worth naming directly if the paper touches on trust calibration in human-AI pairs.

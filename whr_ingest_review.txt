@@ -1,0 +1,6 @@
+/data/data/com.termux/files/home/whr_ingest.py
+/data/data/com.termux/files/home/agents/plugins/developer-essentials/skills/turborepo-caching/SKILL.md
+/data/data/com.termux/files/home/agents/skills/developer-essentials__turborepo-caching/SKILL.md
+/storage/ED7B-AD5A/root_2026/vortex&audit.txt
+/storage/ED7B-AD5A/root_2026/airforge/equinex_vortex.html
+/storage/ED7B-AD5A/root_2026/zeroclaw_lab_broker/vortex&audit.txt

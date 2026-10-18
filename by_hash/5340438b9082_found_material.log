@@ -1,0 +1,23 @@
+# Found Materials Log - Model-Human Collaboration White Paper
+
+This file documents the findings from the RootBase codebase related to model-human collaboration, agentic swarms, and autonomous software development.
+
+## 1. Syntax AI Autonomous Protocol
+**Source:** `/storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Syntax-AI/syntax_ai_main/syntax_ai_autonomous.py`
+**Summary:** An autonomous code optimizer with idle detection designed to handle "Bitch Work" (linting, refactoring, logging conversion). It demonstrates a clear model-human collaboration pattern where the AI performs background maintenance when the human is idle, respecting user workflow by waiting for inactivity.
+
+## 2. Business Growth Autonomous Engine
+**Source:** `/storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Syntax-AI/syntax_ai_main/syntax_pytch/autonomous_execution_engine.py`
+**Summary:** Business growth and strategic tactic generation engine. Demonstrates a model-human collaboration pattern focused on decision-support and strategy generation (tactics, funding hacks, credibility tactics) rather than just code maintenance.
+
+## 3. Vibe Agent Integration
+**Source:** `~/RootBase/bin/vibe-agent`
+**Summary:** A unified CLI bridge designed to integrate the vast RootBase ecosystem. This highlights the architectural need for human-orchestrated agents (via a centralized, mobile-friendly interface) to manage large-scale agentic swarms.
+
+## 4. Post-Mortem Derailment Reflection
+**Source:** `SESSION_POSTMORTEM_DERAILMENT.md`
+**Summary:** Provides candid reflection on human-AI collaboration breakdowns, specifically mentioning "rigid templating" and "missing engineering intent" as key sources of friction. This is a crucial citable point regarding trust calibration in human-AI pairs.
+
+## 5. White Paper Submission Drafts
+**Source:** `claude_compile_white_paper_submission.txt`, `gemini_android_app_white_paper_submission.txt`
+**Summary:** These files contain initial, unvarnished contributions on the structural aspects of successful AI sessions (separation-of-concerns, trust calibration). They directly address the phenomenon of models producing confident language that outruns actual certainty.

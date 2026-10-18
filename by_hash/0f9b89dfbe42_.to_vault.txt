@@ -1,0 +1,13 @@
+https://qvjbvjawtjykxcyjlwed.supabase.co - Project URL
+
+sb_publishable_NiHiiBYZQE_6CnQfoWEdEA_pcleQcH2 - Publishable Key
+
+postgresql://postgres:[YOUR-PASSWORD]@db.qvjbvjawtjykxcyjlwed.supabase.co:5432/postgres Direct Connection String
+
+HighFives2026! Password to Project DB
+
+supabase login
+supabase init
+supabase link --project-ref qvjbvjawtjykxcyjlwed - CLI Setup Commands
+
+sb_secret_ogV_Ksbqjov77pciHUUYxA_bjTWrKF7 - Secret Key

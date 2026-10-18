@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/MoltBleak/the_telegramining/mikey_palace_full.py", line 3, in <module>
+    from telethon import TelegramClient
+ModuleNotFoundError: No module named 'telethon'

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Whorl</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+  body {
+    background: #0a0f1a;
+    color: #7fffd4;
+    font-family: 'Share Tech Mono', monospace;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Demo background — represents "whatever app is open" */
+  #bg {
+    position: fixed;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(0,255,180,0.03) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(167,139,250,0.04) 0%, transparent 50%),
+      #080c14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: rgba(127,255,212,0.15);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    flex-direction: column;
+    gap: 12px;
+    user-select: none;
+  }
+
+  #bg-title {
+    font-size: 1.8rem;
+    color: rgba(127,255,212,0.06);
+    letter-spacing: 12px;
+  }
+
+  /* THE WHORL KNOT */
+  #whorl {
+    position: fixed;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, 
+      rgba(0,255,180,0.25) 0%, 
+      rgba(0,255,180,0.08) 40%,
+      rgba(0,0,0,0.4) 100%);
+    border: 1px solid rgba(0,255,180,0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+    z-index: 9999;
+    transition: width 0.35s cubic-bezier(.4,0,.2,1),
+                height 0.35s cubic-bezier(.4,0,.2,1),
+                border-radius 0.35s cubic-bezier(.4,0,.2,1),
+                background 0.3s,
+                box-shadow 0.3s;
+    box-shadow: 
+      0 0 12px rgba(0,255,180,0.15),
+      0 0 30px rgba(0,255,180,0.06),
+      inset 0 1px 0 rgba(255,255,255,0.1);
+    touch-action: none;
+    user-select: none;
+    bottom: 80px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #whorl.expanded {
+    width: min(340px, 88vw);
+    height: min(420px, 70vh);
+    border-radius: 16px;
+    background: rgba(4, 12, 24, 0.92);
+    border-color: rgba(0,255,180,0.5);
+    box-shadow:
+      0 0 40px rgba(0,255,180,0.12),
+      0 20px 60px rgba(0,0,0,0.8),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  /* Knot icon — the collapsed state */
+  #knot-icon {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.2s;
+  }
+
+  #whorl.expanded #knot-icon { opacity: 0; pointer-events: none; }
+
+  .knot-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,255,180,0.7);
+    animation: spin linear infinite;
+  }
+
+  .k1 { width:28px; height:28px; top:0; left:0; animation-duration:4s; }
+  .k2 { width:18px; height:18px; top:5px; left:5px; border-color:rgba(167,139,250,0.6); animation-duration:3s; animation-direction:reverse; }
+  .k3 { width:8px;  height:8px;  top:10px; left:10px; border-color:rgba(255,107,53,0.8); animation-duration:2s; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Expanded panel content */
+  #panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s 0.1s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #whorl.expanded #panel {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #panel-header {
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid rgba(0,255,180,0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  #panel-title {
+    font-size: 0.75rem;
+    color: rgba(0,255,180,0.9);
+    letter-spacing: 3px;
+  }
+
+  #close-btn {
+    width: 20px; height: 20px;
+    border: 1px solid rgba(0,255,180,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 0.6rem;
+    color: rgba(0,255,180,0.5);
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  #close-btn:hover { border-color: rgba(0,255,180,0.8); color: rgba(0,255,180,1); }
+
+  /* Mini topology canvas */
+  #topo-canvas {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+  }
+
+  /* Context bar */
+  #context-bar {
+    padding: 8px 16px;
+    border-top: 1px solid rgba(0,255,180,0.08);
+    font-size: 0.6rem;
+    color: rgba(0,255,180,0.35);
+    letter-spacing: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Depth tabs */
+  #depth-tabs {
+    display: flex;
+    padding: 6px 12px;
+    gap: 6px;
+    border-top: 1px solid rgba(0,255,180,0.08);
+    flex-shrink: 0;
+  }
+
+  .dtab {
+    flex: 1;
+    padding: 5px 4px;
+    border: 1px solid rgba(0,255,180,0.15);
+    border-radius: 4px;
+    font-size: 0.55rem;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(0,255,180,0.4);
+    letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+
+  .dtab.active {
+    background: rgba(0,255,180,0.1);
+    border-color: rgba(0,255,180,0.5);
+    color: rgba(0,255,180,0.9);
+  }
+
+  /* Whistle hint */
+  #whistle-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: rgba(0,255,180,0.2);
+    letter-spacing: 3px;
+    pointer-events: none;
+    z-index: 100;
+    transition: opacity 0.5s;
+  }
+
+  /* Spawn animation */
+  @keyframes spawn {
+    0% { transform: scale(0) rotate(-180deg); opacity:0; }
+    60% { transform: scale(1.15) rotate(10deg); opacity:1; }
+    100% { transform: scale(1) rotate(0deg); opacity:1; }
+  }
+
+  #whorl { animation: spawn 0.5s cubic-bezier(.4,0,.2,1) forwards; }
+
+  /* Corner snap indicator */
+  #whorl::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px dashed rgba(0,255,180,0.15);
+    animation: spin 8s linear infinite;
+    transition: opacity 0.3s;
+  }
+
+  #whorl.expanded::before { opacity: 0; }
+
+  /* Node tooltip inside panel */
+  #node-info {
+    padding: 6px 16px;
+    font-size: 0.6rem;
+    color: rgba(0,255,180,0.5);
+    border-top: 1px solid rgba(0,255,180,0.08);
+    min-height: 28px;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div id="bg">
+  <div id="bg-title">WHORL</div>
+  <div>TRANSPARENT OVERLAY NAVIGATION</div>
+  <div style="margin-top:20px;color:rgba(127,255,212,0.1)">TAP THE KNOT → CORNER DRAG → WHISTLE TO SPAWN</div>
+</div>
+
+<!-- THE WHORL -->
+<div id="whorl">
+  <div id="knot-icon">
+    <div class="knot-ring k1"></div>
+    <div class="knot-ring k2"></div>
+    <div class="knot-ring k3"></div>
+  </div>
+
+  <div id="panel">
+    <div id="panel-header">
+      <div id="panel-title">WHORL // LOOM</div>
+      <div id="close-btn">✕</div>
+    </div>
+    <canvas id="topo-canvas"></canvas>
+    <div id="node-info">SELECT A NODE</div>
+    <div id="depth-tabs">
+      <div class="dtab active" data-depth="surface">SURFACE</div>
+      <div class="dtab" data-depth="structure">STRUCT</div>
+      <div class="dtab" data-depth="topology">TOPO</div>
+    </div>
+    <div id="context-bar" id="ctx">ROOTBASE // 47 NODES // LOOM v0.1</div>
+  </div>
+</div>
+
+<div id="whistle-hint">DRAG TO CORNER · TAP TO EXPAND</div>
+
+<script>
+const whorl = document.getElementById('whorl');
+const closeBtn = document.getElementById('close-btn');
+const topoCanvas = document.getElementById('topo-canvas');
+const tc = topoCanvas.getContext('2d');
+const nodeInfo = document.getElementById('node-info');
+
+let expanded = false;
+let isDragging = false;
+let dragStartX, dragStartY, elStartX, elStartY;
+let dragMoved = false;
+
+// Corner snap
+const CORNERS = {
+  tl: { bottom:'auto', right:'auto', top:'16px',   left:'16px'  },
+  tr: { bottom:'auto', left:'auto',  top:'16px',   right:'16px' },
+  bl: { top:'auto',    right:'auto', bottom:'80px', left:'16px'  },
+  br: { top:'auto',    left:'auto',  bottom:'80px', right:'16px' },
+};
+
+function snapToCorner(x, y) {
+  const midX = window.innerWidth/2, midY = window.innerHeight/2;
+  const corner = x < midX ? (y < midY ? 'tl' : 'bl') : (y < midY ? 'tr' : 'br');
+  const c = CORNERS[corner];
+  Object.keys(CORNERS.br).forEach(k => whorl.style[k] = '');
+  Object.assign(whorl.style, c);
+}
+
+// Drag
+whorl.addEventListener('pointerdown', e => {
+  if (expanded) return;
+  isDragging = true;
+  dragMoved = false;
+  dragStartX = e.clientX;
+  dragStartY = e.clientY;
+  const rect = whorl.getBoundingClientRect();
+  elStartX = rect.left;
+  elStartY = rect.top;
+  whorl.setPointerCapture(e.pointerId);
+  e.preventDefault();
+});
+
+whorl.addEventListener('pointermove', e => {
+  if (!isDragging) return;
+  const dx = e.clientX - dragStartX;
+  const dy = e.clientY - dragStartY;
+  if (Math.abs(dx) > 5 || Math.abs(dy) > 5) dragMoved = true;
+  if (!dragMoved) return;
+  const nx = elStartX + dx;
+  const ny = elStartY + dy;
+  whorl.style.right = 'auto'; whorl.style.bottom = 'auto';
+  whorl.style.left = Math.max(0, Math.min(window.innerWidth-52, nx)) + 'px';
+  whorl.style.top  = Math.max(0, Math.min(window.innerHeight-52, ny)) + 'px';
+  e.preventDefault();
+});
+
+whorl.addEventListener('pointerup', e => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (dragMoved) {
+    snapToCorner(e.clientX, e.clientY);
+  } else {
+    toggle();
+  }
+});
+
+closeBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  collapse();
+});
+
+function toggle() { expanded ? collapse() : expand(); }
+
+function expand() {
+  expanded = true;
+  whorl.classList.add('expanded');
+  document.getElementById('whistle-hint').style.opacity = '0';
+  setTimeout(initTopo, 350);
+}
+
+function collapse() {
+  expanded = false;
+  whorl.classList.remove('expanded');
+  document.getElementById('whistle-hint').style.opacity = '1';
+}
+
+// Whistle detection (mic amplitude spike)
+let audioCtx, analyser, mic;
+async function initWhistle() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+    audioCtx = new AudioContext();
+    analyser = audioCtx.createAnalyser();
+    mic = audioCtx.createMediaStreamSource(stream);
+    mic.connect(analyser);
+    analyser.fftSize = 256;
+    const buf = new Uint8Array(analyser.frequencyBinCount);
+    let lastSpike = 0;
+    function check() {
+      analyser.getByteFrequencyData(buf);
+      // Whistle freq range ~1-4kHz
+      const sampleRate = audioCtx.sampleRate;
+      const startBin = Math.floor(1000 * analyser.fftSize / sampleRate);
+      const endBin   = Math.floor(4000 * analyser.fftSize / sampleRate);
+      let sum = 0;
+      for (let i = startBin; i < endBin; i++) sum += buf[i];
+      const avg = sum / (endBin - startBin);
+      const now = Date.now();
+      if (avg > 80 && now - lastSpike > 1500) {
+        lastSpike = now;
+        if (!expanded) expand(); else collapse();
+      }
+      requestAnimationFrame(check);
+    }
+    check();
+  } catch(e) {
+    // No mic — tap only
+  }
+}
+initWhistle();
+
+// Mini topology
+const NODES = [
+  {id:'Whorl',        cat:'loom',  x:0,   y:0,   r:10},
+  {id:'CodeCity',     cat:'core',  x:70,  y:-20, r:8 },
+  {id:'AskHole',      cat:'saas',  x:80,  y:40,  r:7 },
+  {id:'Autopilot',    cat:'core',  x:-60, y:30,  r:7 },
+  {id:'MrsHiggins',   cat:'saas',  x:-70, y:-30, r:7 },
+  {id:'Molt',         cat:'loom',  x:20,  y:70,  r:6 },
+  {id:'OpenClaw',     cat:'agent', x:-20, y:-75, r:6 },
+  {id:'Thoth',        cat:'agent', x:50,  y:-65, r:5 },
+  {id:'Bridge',       cat:'bridge',x:-90, y:10,  r:5 },
+  {id:'OSINT',        cat:'osint', x:90,  y:-50, r:5 },
+];
+
+const EDGES_M = [
+  [0,1],[0,2],[0,3],[0,4],[0,5],[0,6],
+  [1,7],[1,9],[3,8],[4,3],[5,3],[6,7],
+];
+
+const COLS = {
+  core:'#00ffb4', loom:'#a78bfa', saas:'#60a5fa',
+  agent:'#f43f5e', bridge:'#ff6b35', osint:'#f59e0b',
+};
+
+let topoNodes = [];
+let topoFrame = 0;
+let hoveredNode = null;
+let depth = 'surface';
+
+function initTopo() {
+  const rect = topoCanvas.getBoundingClientRect();
+  topoCanvas.width = rect.width * devicePixelRatio;
+  topoCanvas.height = rect.height * devicePixelRatio;
+  tc.scale(devicePixelRatio, devicePixelRatio);
+  const W = rect.width, H = rect.height;
+  const cx = W/2, cy = H/2;
+
+  topoNodes = NODES.map((n,i) => ({
+    ...n,
+    px: cx + n.x * (W/280),
+    py: cy + n.y * (H/280),
+    vx:0, vy:0,
+  }));
+
+  topoCanvas.addEventListener('mousemove', onTopoMouse);
+  topoCanvas.addEventListener('click', onTopoClick);
+  topoCanvas.addEventListener('touchstart', onTopoTouch, {passive:true});
+
+  if (!topoFrame) topoLoop();
+}
+
+function onTopoMouse(e) {
+  const rect = topoCanvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  checkTopoHover(mx, my);
+}
+
+function onTopoTouch(e) {
+  const rect = topoCanvas.getBoundingClientRect();
+  const t = e.touches[0];
+  const mx = t.clientX - rect.left, my = t.clientY - rect.top;
+  checkTopoHover(mx, my);
+}
+
+function checkTopoHover(mx, my) {
+  hoveredNode = null;
+  for (const n of topoNodes) {
+    const dx = mx - n.px, dy = my - n.py;
+    if (Math.sqrt(dx*dx+dy*dy) < n.r+8) { hoveredNode = n; break; }
+  }
+  if (hoveredNode) {
+    nodeInfo.textContent = `${hoveredNode.id.toUpperCase()} // ${hoveredNode.cat.toUpperCase()}`;
+    nodeInfo.style.color = COLS[hoveredNode.cat] + 'cc';
+  } else {
+    nodeInfo.textContent = 'SELECT A NODE';
+    nodeInfo.style.color = 'rgba(0,255,180,0.35)';
+  }
+}
+
+function onTopoClick(e) {
+  if (hoveredNode) {
+    nodeInfo.textContent = `▶ ${hoveredNode.id.toUpperCase()} // NAVIGATING...`;
+  }
+}
+
+function topoLoop() {
+  if (!expanded) { topoFrame = 0; return; }
+  const rect = topoCanvas.getBoundingClientRect();
+  const W = rect.width, H = rect.height;
+  tc.clearRect(0,0,W,H);
+
+  topoFrame++;
+
+  // Edges
+  EDGES_M.forEach(([a,b]) => {
+    const na = topoNodes[a], nb = topoNodes[b];
+    const isHot = hoveredNode && (hoveredNode === na || hoveredNode === nb);
+    tc.beginPath();
+    tc.moveTo(na.px, na.py);
+    tc.lineTo(nb.px, nb.py);
+    tc.strokeStyle = isHot ? 'rgba(0,255,180,0.5)' : 'rgba(0,255,180,0.1)';
+    tc.lineWidth = isHot ? 1.5 : 0.8;
+    tc.stroke();
+  });
+
+  // Nodes
+  topoNodes.forEach(n => {
+    const isHot = hoveredNode === n;
+    const pulse = Math.sin(topoFrame*0.05 + n.px*0.05)*0.2+0.8;
+    const col = COLS[n.cat];
+
+    // Glow
+    const g = tc.createRadialGradient(n.px,n.py,0,n.px,n.py,n.r*3);
+    g.addColorStop(0, col+'66');
+    g.addColorStop(1, col+'00');
+    tc.beginPath();
+    tc.arc(n.px, n.py, n.r*3*pulse, 0, Math.PI*2);
+    tc.fillStyle = g;
+    tc.fill();
+
+    // Circle
+    tc.beginPath();
+    tc.arc(n.px, n.py, n.r*(isHot?1.4:1), 0, Math.PI*2);
+    tc.fillStyle = isHot ? col : col+'cc';
+    tc.fill();
+
+    // Label
+    tc.font = `${isHot?'bold ':''} ${isHot?10:8}px Share Tech Mono`;
+    tc.fillStyle = isHot ? '#fff' : col+'99';
+    tc.textAlign = 'center';
+    tc.fillText(n.id, n.px, n.py - n.r - 4);
+  });
+
+  // Depth overlay hint
+  if (depth === 'topology') {
+    tc.font = '8px Share Tech Mono';
+    tc.fillStyle = 'rgba(0,255,180,0.15)';
+    tc.textAlign = 'center';
+    tc.fillText('TOPOLOGICAL DEPTH // LOOM SURFACE', W/2, H-8);
+  }
+
+  requestAnimationFrame(topoLoop);
+}
+
+// Depth tabs
+document.querySelectorAll('.dtab').forEach(tab => {
+  tab.addEventListener('click', e => {
+    e.stopPropagation();
+    document.querySelectorAll('.dtab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    depth = tab.dataset.depth;
+    nodeInfo.textContent = `DEPTH: ${depth.toUpperCase()}`;
+  });
+});
+</script>
+</body>
+</html>

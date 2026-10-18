@@ -1,0 +1,29 @@
+================================================================================
+[SWARM HANDOFF PAYLOAD]
+--------------------------------------------------------------------------------
+SOURCE_MODEL: <Model Name>
+TARGET_MODEL: <Model Name / All Models>
+PHASE: <Intent | Architecture | Implementation | Verification>
+--------------------------------------------------------------------------------
+
+1. INTENT & OBJECTIVE:
+   - High-level goal and problem statement.
+   - Target developer intent & scope (how we intend to address what we are solving and why).
+
+2. CONTEXT & PATH VITALS:
+   - Active Working Directory / Repository.
+   - Primary File Targets (Meridian path routes, module imports).
+   - System Constraints (Terminal runtime, offline constraints, typing, memory limits).
+
+3. PROPOSED ARCHITECTURE / CODE DELTA:
+   - High-level design changes OR exact atomic code diffs.
+   - Interfaces, contracts, or schemas being introduced/modified.
+
+4. EQUILEX VERIFICATION & TEST CRITERIA:
+   - How this output is validated (acceptance criteria, unit tests, diff checks).
+   - Invariants that MUST NOT be broken.
+
+5. NEXT STEP & DELEGATION:
+   - Specific task requested from the receiving model.
+================================================================================
+

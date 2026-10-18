@@ -1,0 +1,8 @@
+{
+  "ollama_host": "http://127.0.0.1:11434",
+  "model": "deepseek-r1:1.5b",
+  "default_iterations": 5,
+  "temperature": 0.7,
+  "ui_theme": "tree",
+  "log_level": "INFO"
+}

@@ -1,0 +1,36 @@
+==================================================
+5TR8D0P3 DOCUMENTATION FILE
+SOURCE FILE: iterate.py
+FULL PATH: /storage/ED7B-AD5A/root_2026/YOU-ARE-HERE/Unfinished-Projects/MoltBleak/src/core/iterate.py
+==================================================
+
+[INTENT AND PURPOSE (THE FEET)]
+
+[FUNCTIONAL BREAKDOWN]
+
+--- class MoltIterator:
+"""Load the base molt system prompt"""
+
+--- def __init__(self, ollama_client):
+"""Load the base molt system prompt"""
+
+--- def _load_system_prompt(self) -> str:
+"""Load the base molt system prompt"""
+
+--- def _default_system_prompt(self) -> str:
+"""Run one iteration of improvement"""
+
+--- def iterate(self, task: str, previous_results: List[Dict]) -> Dict:
+"""Run one iteration of improvement"""
+
+--- def _build_context(self, task: str, previous_results: List[Dict]) -> str:
+"""Build context string from previous attempts"""
+
+--- def _build_prompt(self, task: str, context: str) -> str:
+"""Build the improvement prompt"""
+
+--- def _evaluate(self, output: str, previous_results: List[Dict]) -> float:
+"""Simple evaluation - can be enhanced later"""
+
+--- def _simple_similarity(self, text1: str, text2: str) -> float:
+"""Quick similarity check"""

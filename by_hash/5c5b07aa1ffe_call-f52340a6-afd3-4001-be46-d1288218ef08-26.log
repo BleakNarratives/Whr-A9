@@ -1,0 +1,40 @@
+MANIFEST.json
+README.md
+bleak_playbook.cpython-313.pyc
+bleak_playbook.cpython-314.pyc
+case_db_core.cpython-313.pyc
+case_db_core.cpython-314.pyc
+constitutional_core.cpython-313.pyc
+constitutional_core.cpython-314.pyc
+event_bus.cpython-313.pyc
+event_bus.cpython-314.pyc
+# RECOVERED GHOST LOGIC - YES-HUH BRO
+  0           RESUME                   0
+
+  1           LOAD_SMALL_INT           0
+              LOAD_CONST               1 (None)
+total 110
+drwxrws---.  7 u0_a233 media_rw  3452 Jul 29 00:44 .git
+-rw-rw----.  1 u0_a233 media_rw  2628 Jul 28 12:00 ADB-BRIDGE.md
+-rw-rw----.  1 u0_a233 media_rw  2842 Jul 28 12:00 LOCAL-LLM.md
+-rw-rw----.  1 u0_a233 media_rw  2195 Jul 27 05:30 Melvin.txt
+drwxrws---. 18 u0_a233 media_rw  4096 Jul 29 00:40 OutClaw
+-rw-rw----.  1 u0_a233 media_rw  3736 Jul 28 12:00 README.md
+-rw-rw----.  1 u0_a233 media_rw  4969 Jul 28 12:00 SETUP.md
+-rw-rw----.  1 u0_a233 media_rw  2780 Jul 28 12:00 USE-CASES.md
+-rw-rw----.  1 u0_a233 media_rw 12305 Jul 29 00:47 again_but_how.md
+-rw-rw----.  1 u0_a233 media_rw   116 Jul 28 21:10 config.json
+drwxrws---.  4 u0_a233 media_rw  3452 Jul 28 21:02 grok-cli-termux-native
+-rw-rw----.  1 u0_a233 media_rw  2332 Jul 28 12:00 hermes.md
+-rw-rw----.  1 u0_a233 media_rw  1135 Jul 28 20:34 inspect_zips.sh
+drwxrws---.  2 u0_a233 media_rw  3452 Jul 28 11:50 logs
+-rw-rw----.  1 u0_a233 media_rw  1039 Jul 28 11:47 patch_manifest.py
+-rw-rw----.  1 u0_a233 media_rw   862 Jul 28 11:43 prompt_loader.sh
+drwxrws---.  2 u0_a233 media_rw  3452 Jul 28 11:50 prompts
+drwxrws---.  2 u0_a233 media_rw  3452 Jul 28 12:00 public
+-rw-rw----.  1 u0_a233 media_rw   821 Jul 28 11:50 run_all.sh
+-rw-rw----.  1 u0_a233 media_rw   926 Jul 28 12:01 run_sprint.sh
+-rw-rw----.  1 u0_a233 media_rw  1872 Jul 28 11:52 swarm_monitor.sh
+-rw-rw----.  1 u0_a233 media_rw  1031 Jul 28 11:44 sync_downloads.sh
+-rw-rw----.  1 u0_a233 media_rw  1322 Jul 28 12:03 sync_repo.sh
+-rw-rw----.  1 u0_a233 media_rw  1421 Jul 28 11:43 telemetry_visualizer.py

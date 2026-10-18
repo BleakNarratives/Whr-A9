@@ -1,0 +1,11 @@
+[22:15:01] === Mrs. Higgins Pipeline START ===
+[22:15:01] Mode: LIVE | Platform: ALL
+[22:15:01] --- 1/5 Front Desk Lady ---
+Traceback (most recent call last):
+  File "/storage/emulated/0/RootBase/src/saas/higgins/front_desk_lady.py", line 183, in <module>
+    main()
+    ~~~~^^
+  File "/storage/emulated/0/RootBase/src/saas/higgins/front_desk_lady.py", line 177, in main
+    fdl = FrontDeskLady(lightning_id, voltage_api_key, dry_run=args.dry_run)
+TypeError: FrontDeskLady.__init__() got multiple values for argument 'dry_run'
+[22:15:02] FATAL: front_desk_lady.py failed

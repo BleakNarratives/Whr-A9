@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "generated": "2026-07-04T19:47:52.718721",
+    "target": {
+      "name": "Sumner County DCF",
+      "vertical": "general",
+      "location": "Wellington, KS",
+      "source": "public_intel"
+    },
+    "package_type": "investment_intelligence"
+  },
+  "signal": {
+    "headline": "Sumner County DCF \u2014 public_intel reconnaissance",
+    "body": "Scheduled sweep for Sumner County DCF (general) in Wellington, KS. Data source: public_intel.",
+    "action": "Review pitch package",
+    "region": "Wellington, KS"
+  },
+  "pitch": {
+    "hook": "Sumner County DCF is losing money every day without this.",
+    "situation": "Analysis of Sumner County DCF indicates market opportunity.",
+    "risk": "Competition may respond quickly.",
+    "fix": "Deploy AI automation for Sumner County DCF.",
+    "ask": "Schedule 20-minute demo.",
+    "cost": "$249/month setup included",
+    "guarantee": "If no ROI in 30 days, full refund."
+  },
+  "shareholder_summary": {
+    "investment_thesis": "Sumner County DCF represents a general opportunity in Wellington, KS.",
+    "risk_factors": [
+      "Competition may respond quickly."
+    ],
+    "recommended_action": "Schedule 20-minute demo.",
+    "estimated_entry": "$249/month setup included"
+  }
+}

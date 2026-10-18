@@ -1,0 +1,241 @@
+name: 🚀 Package Submission
+description: Submit a package to be included in Termux App Store
+title: "[SUBMISSION] "
+labels:
+  - package-submission
+  - needs-review
+assignees:
+  - djunekz
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Package Submission
+        Thanks for contributing to Termux App Store!
+        > ⚠️ Please make sure you have read the [CONTRIBUTING.md](../CONTRIBUTING.md) guide before submitting.
+
+  - type: markdown
+    attributes:
+      value: "### 📦 Package Details"
+
+  - type: input
+    id: package-name
+    attributes:
+      label: Package Name
+      description: Unique identifier, lowercase, no spaces
+      placeholder: e.g. neovim, my-tool
+    validations:
+      required: true
+
+  - type: input
+    id: display-name
+    attributes:
+      label: Display Name
+      description: Human-readable name shown in the store
+      placeholder: e.g. Neovim, My Tool
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Current version being submitted
+      placeholder: e.g. v1.2.3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Tools
+        - Development
+        - Security
+        - Networking
+        - Media
+        - Utility
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: short-description
+    attributes:
+      label: Short Description
+      description: One-line description (max 100 characters) shown in the store
+      placeholder: A fast and modern terminal text editor
+    validations:
+      required: true
+
+  - type: textarea
+    id: full-description
+    attributes:
+      label: Full Description
+      description: Detailed description of the package, its features and use cases
+      placeholder: |
+        Neovim is a refactor, and sometimes redactor, in the tradition of Vim...
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### 🔗 Links"
+
+  - type: input
+    id: source-repo
+    attributes:
+      label: Source Repository
+      placeholder: https://github.com/author/package
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Official Website
+      placeholder: https://example.com (optional)
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: e.g. MIT, GPL-3.0, Apache-2.0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### 📥 Download URLs"
+
+  - type: input
+    id: url-aarch64
+    attributes:
+      label: Download URL — aarch64
+      placeholder: https://github.com/author/package/releases/download/v1.0/package-aarch64.tar.gz
+
+  - type: input
+    id: sha256-aarch64
+    attributes:
+      label: SHA256 — aarch64
+      placeholder: abc123...
+
+  - type: input
+    id: url-arm
+    attributes:
+      label: Download URL — arm
+      placeholder: https://github.com/author/package/releases/download/v1.0/package-arm.tar.gz
+
+  - type: input
+    id: sha256-arm
+    attributes:
+      label: SHA256 — arm
+      placeholder: abc123...
+
+  - type: input
+    id: url-x86-64
+    attributes:
+      label: Download URL — x86_64
+      placeholder: https://github.com/author/package/releases/download/v1.0/package-x86_64.tar.gz
+
+  - type: input
+    id: sha256-x86-64
+    attributes:
+      label: SHA256 — x86_64
+      placeholder: abc123...
+
+  - type: input
+    id: url-i686
+    attributes:
+      label: Download URL — i686
+      placeholder: https://github.com/author/package/releases/download/v1.0/package-i686.tar.gz
+
+  - type: input
+    id: sha256-i686
+    attributes:
+      label: SHA256 — i686
+      placeholder: abc123...
+
+  - type: markdown
+    attributes:
+      value: "### 📋 Maintainer"
+
+  - type: input
+    id: maintainer-name
+    attributes:
+      label: Maintainer Name
+      placeholder: Your name or GitHub username
+    validations:
+      required: true
+
+  - type: input
+    id: maintainer-github
+    attributes:
+      label: Maintainer GitHub
+      placeholder: "@yourusername"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### 🧪 Testing"
+
+  - type: dropdown
+    id: tested
+    attributes:
+      label: Have you tested this package on Termux?
+      options:
+        - "Yes, tested and working"
+        - "Partially tested"
+        - "Not tested yet"
+    validations:
+      required: true
+
+  - type: input
+    id: tested-android
+    attributes:
+      label: Tested on Android version(s)
+      placeholder: e.g. Android 12, Android 13
+
+  - type: input
+    id: tested-arch
+    attributes:
+      label: Tested on architecture(s)
+      placeholder: e.g. aarch64
+
+  - type: textarea
+    id: test-output
+    attributes:
+      label: Installation test output
+      description: Paste the result of your test installation
+      render: shell
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any special installation notes, dependencies, or known issues
+      placeholder: Optional...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have read CONTRIBUTING.md
+          required: true
+        - label: Package name is unique and not already in the store
+          required: true
+        - label: All download URLs are direct links to the actual files
+          required: true
+        - label: SHA256 checksums are provided for all supported architectures
+          required: true
+        - label: Package has been tested on Termux
+          required: true
+        - label: License is open source or allows redistribution
+          required: true
+        - label: I am the maintainer or have permission to submit this package
+          required: true
+        - label: Package does not contain malware or malicious code
+          required: true

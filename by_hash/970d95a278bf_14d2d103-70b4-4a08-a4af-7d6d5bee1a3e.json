@@ -1,0 +1,10 @@
+{
+  "id": "14d2d103-70b4-4a08-a4af-7d6d5bee1a3e",
+  "sender": "Tester",
+  "recipient": "WhorlCentral",
+  "type": "tech_bridge_test",
+  "priority": 0,
+  "payload": {},
+  "timestamp": "2026-06-25T08:15:25.119918",
+  "ttl": 3600
+}

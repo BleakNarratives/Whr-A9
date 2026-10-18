@@ -1,0 +1,30 @@
+nohup: ignoring input
+2026-06-26 21:34:55,047 - INFO - Healing Engine listening on port 5007
+2026-06-26 21:34:55,785 - INFO - Applying healing patch from peer: swarm_master_controller
+2026-06-26 21:36:28,125 - INFO - Applying healing patch from peer: swarm_master_controller
+2026-06-26 21:39:28,867 - INFO - Applying healing patch from peer: swarm_master_controller
+2026-06-26 21:41:39,835 - INFO - Applying healing patch from peer: swarm_master_controller
+nohup: ignoring input
+2026-06-26 22:31:44,305 - INFO - Healing Engine listening on port 5007
+2026-06-26 22:32:34,346 - INFO - Patch applied from swarm_master_controller | action=reset_memory_helix
+2026-06-26 22:32:34,351 - INFO - Current state: {}
+2026-06-26 22:35:07,576 - INFO - Patch applied from swarm_master_controller | action=reset_memory_helix
+2026-06-26 22:35:07,583 - INFO - Current state: {}
+2026-06-26 22:37:27,270 - WARNING - HIGH LOAD on thoth_agent_stress_test_01: 0.99 — auto-patch queued
+2026-06-26 22:37:27,282 - INFO - Reset thoth_agent_stress_test_01 load to 0.5
+2026-06-26 22:37:27,282 - INFO - Patch applied from healing_engine_auto | action=reset_memory_helix
+2026-06-26 22:37:27,282 - INFO - Current state: {
+  "thoth_agent_stress_test_01": {
+    "cognitive_load": 0.5,
+    "status": "HEALED",
+    "last_seen": 1782531447.2641056
+  }
+}
+2026-06-26 22:37:27,283 - INFO - Patch applied from swarm_master_controller | action=reset_memory_helix
+2026-06-26 22:37:27,283 - INFO - Current state: {
+  "thoth_agent_stress_test_01": {
+    "cognitive_load": 0.5,
+    "status": "HEALED",
+    "last_seen": 1782531447.2641056
+  }
+}

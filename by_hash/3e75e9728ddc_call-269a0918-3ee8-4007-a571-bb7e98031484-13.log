@@ -1,0 +1,153 @@
+LEGAL_ASSASSIN_MANIFESTO.md
+QRD.md
+README.md
+SWARM_STATUS.md
+StagedChunks
+WHO_DID_WHAT.md
+__pycache__
+accountability_filter.py
+agents
+arena
+backups
+bar_grievance_engine.py
+bleak_playbook.py
+bundle_splitter.py
+case_analysis_output.json
+case_db_core.py
+case_matrix.db
+claw_boardroom.py
+constitutional_core.py
+copy_pasta_blocks.md
+data
+docs
+event_bus.py
+exports
+external_pipeline.py
+family_advocacy.py
+index.html
+ingest_govt_manual.py
+interactive_guide.py
+legacy_engines.py
+legal_maxims.py
+mandatory_language_parser.py
+mel_template.txt
+notarial_protest.py
+orchestrator.py
+outclaw_boardroom_core.py
+outclaw_engine.py
+outclaw_manifesto.md
+outclaw_orchestrator.py
+outclaw_roadmap.mermaid
+outclaw_validator.py
+predicate_core.py
+preload_constitutional_titans.py
+preload_liability_matrix.py
+preload_title18.py
+prose_tactics_library.py
+rebuttal_engine.py
+scout_matrix.json
+scout_swarm
+sentinel
+## main...origin/main
+?? Melvin.txt
+?? OutClaw/
+?? config.json
+?? grok-cli-termux-native/
+?? inspect_zips.sh
+?? logs/
+?? outclaw.zip
+?? patch_manifest.py
+?? prompt_loader.sh
+?? prompts/
+?? run_all.sh
+?? run_sprint.sh
+?? swarm_monitor.sh
+?? sync_downloads.sh
+?? sync_repo.sh
+?? telemetry_visualizer.py
+* main
+  master
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+OutClaw
+OutClaw/scout_swarm
+OutClaw/__pycache__
+OutClaw/tests
+OutClaw/tests/__pycache__
+OutClaw/.event_bus
+OutClaw/docs
+OutClaw/tutorials
+OutClaw/templates
+OutClaw/data
+OutClaw/exports
+OutClaw/backups
+OutClaw/study
+OutClaw/agents
+OutClaw/.pytest_cache
+OutClaw/.pytest_cache/v
+OutClaw/.pytest_cache/v/cache
+OutClaw/arena
+OutClaw/arena/data
+OutClaw/arena/scripts
+OutClaw/StagedChunks
+OutClaw/sentinel
+OutClaw/outclaw_engine.py
+OutClaw/accountability_filter.py
+OutClaw/predicate_core.py
+OutClaw/interactive_guide.py
+OutClaw/claw_boardroom.py
+OutClaw/WHO_DID_WHAT.md
+OutClaw/outclaw_boardroom_core.py
+OutClaw/swarm_generator.py
+OutClaw/scout_swarm/README.md
+OutClaw/bleak_playbook.py
+OutClaw/rebuttal_engine.py
+OutClaw/case_db_core.py
+OutClaw/bundle_splitter.py
+OutClaw/smoke_test.py
+OutClaw/preload_title18.py
+OutClaw/preload_liability_matrix.py
+OutClaw/mandatory_language_parser.py
+OutClaw/preload_constitutional_titans.py
+OutClaw/ingest_govt_manual.py
+OutClaw/external_pipeline.py
+OutClaw/README.md
+OutClaw/__pycache__/README.md
+OutClaw/tests/test_validation.py
+OutClaw/tests/test_document_labels.py
+OutClaw/tests/README.md
+OutClaw/LEGAL_ASSASSIN_MANIFESTO.md
+OutClaw/ui_engine.py
+OutClaw/event_bus.py
+OutClaw/prose_tactics_library.py
+OutClaw/constitutional_core.py
+OutClaw/outclaw_orchestrator.py
+OutClaw/legal_maxims.py
+OutClaw/SWARM_STATUS.md
+OutClaw/.event_bus/README.md
+OutClaw/bar_grievance_engine.py
+OutClaw/docs/README.md
+OutClaw/tutorials/README.md
+OutClaw/templates/README.md
+OutClaw/data/test_case.py
+OutClaw/data/README.md
+OutClaw/exports/README.md
+OutClaw/backups/README.md
+OutClaw/QRD.md
+OutClaw/legacy_engines.py
+OutClaw/study/hermes_server.py
+OutClaw/study/README.md
+OutClaw/notarial_protest.py
+OutClaw/family_advocacy.py
+OutClaw/agents/README.md
+OutClaw/outclaw_validator.py
+OutClaw/.pytest_cache/README.md
+OutClaw/outclaw_manifesto.md
+OutClaw/copy_pasta_blocks.md
+OutClaw/arena/init_arena.py
+OutClaw/arena/README.md
+OutClaw/StagedChunks/README.md
+OutClaw/sentinel/docket_scraper.py
+OutClaw/sentinel/grievance_auditor.py
+OutClaw/sentinel/README.md
+OutClaw/orchestrator.py

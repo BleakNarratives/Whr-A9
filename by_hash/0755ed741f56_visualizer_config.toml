@@ -1,0 +1,8 @@
+[visualizer.default]
+endpoint = "/api/topology"
+
+[audio]
+bgm_path = "assets/chiptune.mp3"
+
+[visual]
+ar_persona = "assets/8bit_mario.obj"

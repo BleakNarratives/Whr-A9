@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RootBase // Topology</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
+
+  :root {
+    --void: #00040a;
+    --deep: #000d1a;
+    --grid: rgba(0,255,180,0.06);
+    --core: #00ffb4;
+    --bridge: #ff6b35;
+    --engine: #a78bfa;
+    --osint: #f59e0b;
+    --dead: #1a2a1a;
+    --text: #7fffd4;
+    --dim: rgba(0,255,180,0.3);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* Scanline overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0.15) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+  }
+
+  /* HUD */
+  #hud {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #hud-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .title-block {
+    border-left: 2px solid var(--core);
+    padding-left: 12px;
+  }
+
+  .title-block h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--core);
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px var(--core);
+  }
+
+  .title-block .sub {
+    font-size: 0.65rem;
+    color: var(--dim);
+    letter-spacing: 3px;
+    margin-top: 2px;
+  }
+
+  .stats-block {
+    text-align: right;
+    font-size: 0.65rem;
+    color: var(--dim);
+    line-height: 1.8;
+  }
+
+  .stats-block span { color: var(--core); }
+
+  #hud-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.6rem;
+    color: var(--dim);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  #tooltip {
+    position: fixed;
+    z-index: 20;
+    background: rgba(0,4,10,0.95);
+    border: 1px solid var(--core);
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    color: var(--text);
+    pointer-events: none;
+    display: none;
+    max-width: 220px;
+    line-height: 1.7;
+    box-shadow: 0 0 20px rgba(0,255,180,0.2);
+  }
+
+  .tooltip-name {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.75rem;
+    color: var(--core);
+    margin-bottom: 4px;
+  }
+
+  .tooltip-meta { color: var(--dim); }
+
+  #console-feed {
+    font-size: 0.6rem;
+    color: var(--dim);
+    line-height: 1.9;
+    max-width: 280px;
+    text-align: right;
+  }
+
+  #console-feed .feed-line { 
+    opacity: 0;
+    animation: fadein 0.3s forwards;
+  }
+
+  @keyframes fadein { to { opacity:1; } }
+
+  .ping {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+    animation: pingout 1s ease-out forwards;
+  }
+
+  @keyframes pingout {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <div id="hud-top">
+    <div class="title-block">
+      <h1>ROOTBASE</h1>
+      <div class="sub">TOPOLOGICAL MAP // BLEAK NARRATIVES // 2026</div>
+    </div>
+    <div class="stats-block">
+      NODES <span id="s-nodes">0</span> &nbsp;|&nbsp;
+      EDGES <span id="s-edges">0</span><br>
+      MASS <span>2.1G</span> &nbsp;|&nbsp;
+      DEVICE <span>TERMUX/ARM64</span><br>
+      ENGINE <span>LOOM v0.1</span> &nbsp;|&nbsp;
+      STATUS <span style="color:#00ffb4">ACTIVE</span>
+    </div>
+  </div>
+
+  <div id="hud-bottom">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#00ffb4;box-shadow:0 0 6px #00ffb4"></div> CORE ENGINE</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ff6b35;box-shadow:0 0 6px #ff6b35"></div> BRIDGE / SHIM</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#a78bfa;box-shadow:0 0 6px #a78bfa"></div> LOOM / WEAVER</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;box-shadow:0 0 6px #f59e0b"></div> OSINT / RECON</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#60a5fa;box-shadow:0 0 6px #60a5fa"></div> SAAS / PRODUCT</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f43f5e;box-shadow:0 0 6px #f43f5e"></div> AGENT / AI</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#334155"></div> ARCHIVE</div>
+    </div>
+    <div id="console-feed"></div>
+  </div>
+</div>
+
+<div id="tooltip">
+  <div class="tooltip-name" id="tt-name"></div>
+  <div class="tooltip-meta" id="tt-meta"></div>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W, H;
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// RootBase nodes — real data from ls output
+const RAW = [
+  // [name, category, size_weight, x_hint, y_hint]
+  // Core / center
+  { id:'CodeCity-Bench',    cat:'loom',    w:9,  desc:'Loom engine + scanners + workbench v0.1' },
+  { id:'askhole_autopilot', cat:'core',    w:7,  desc:'Daemon: SHIP/SCOUT/GENERATE/MONITOR modes' },
+  { id:'mrs_higgins_saas',  cat:'saas',   w:8,  desc:'Mrs Higgins orchestrator + saas packages' },
+  { id:'vertical_ai',       cat:'core',   w:7,  desc:'Vertical AI engine + scouts + boardroom' },
+  { id:'thoth_orchestrator',cat:'agent',  w:6,  desc:'Thoth: scribe/orchestration layer' },
+  // Bridges
+  { id:'api_bridge',        cat:'bridge', w:5,  desc:'API bridge — cross-system connector' },
+  { id:'conductor_shim',    cat:'bridge', w:4,  desc:'Conductor shim v1+v2 — exec wrapper' },
+  { id:'panel_connector',   cat:'bridge', w:4,  desc:'Panel connector — UI data relay' },
+  { id:'platform_adapter',  cat:'bridge', w:3,  desc:'Platform adapter — env normalization' },
+  { id:'citybridge',        cat:'bridge', w:4,  desc:'Code City bridge layer' },
+  { id:'fractal_mesh',      cat:'bridge', w:3,  desc:'Fractal mesh relay' },
+  { id:'fractal_relay',     cat:'bridge', w:3,  desc:'Fractal relay — signal propagation' },
+  { id:'propagated_node',   cat:'bridge', w:4,  desc:'Swarm node propagation layer' },
+  // Loom / Whorl
+  { id:'whorl_runtime',     cat:'loom',   w:6,  desc:'Whorl runtime — portable env layer' },
+  { id:'whorl_scribe',      cat:'loom',   w:5,  desc:'Whorl scribe — structured output' },
+  { id:'loom_encoder',      cat:'loom',   w:5,  desc:'Loom encoder — topology compression' },
+  { id:'molt_v3_engine',    cat:'loom',   w:6,  desc:'Molt v3 — swarm engine core' },
+  { id:'Molt-V4',           cat:'loom',   w:5,  desc:'Molt v4 iteration' },
+  { id:'molt_bleak',        cat:'loom',   w:5,  desc:'MoltBleak — narrative engine' },
+  // OSINT
+  { id:'blackbird',         cat:'osint',  w:5,  desc:'Blackbird — username OSINT' },
+  { id:'maigret',           cat:'osint',  w:5,  desc:'Maigret — deep OSINT recon' },
+  { id:'tookie-osint',      cat:'osint',  w:4,  desc:'Tookie OSINT suite' },
+  { id:'WebSift',           cat:'osint',  w:4,  desc:'WebSift + Maigret bridge' },
+  { id:'ReconDog',          cat:'osint',  w:4,  desc:'ReconDog scanner' },
+  { id:'OSINT-MasterTool',  cat:'osint',  w:5,  desc:'OSINT master aggregator' },
+  { id:'PhoneInfoga',       cat:'osint',  w:4,  desc:'Phone intelligence scanner' },
+  { id:'TBomb',             cat:'osint',  w:3,  desc:'TBomb utility' },
+  // SaaS / Product
+  { id:'AskHole',           cat:'saas',   w:7,  desc:'AskHole — flagship product' },
+  { id:'CodeMentor-MVP',    cat:'saas',   w:6,  desc:'CodeMentor MVP + SaaS' },
+  { id:'hotseat',           cat:'saas',   w:5,  desc:'HotSeat — interview tool' },
+  { id:'terminal_titans',   cat:'saas',   w:4,  desc:'Terminal Titans — game' },
+  { id:'foxwoodacademy',    cat:'saas',   w:4,  desc:'Foxwood Academy' },
+  { id:'syntax_captcoder',  cat:'saas',   w:4,  desc:'SyntaxCapCoder' },
+  { id:'voice-cloner',      cat:'saas',   w:5,  desc:'Voice cloner — audio ML' },
+  // Agent / AI
+  { id:'motherbrain_boot',  cat:'agent',  w:5,  desc:'MotherBrain boot governor' },
+  { id:'openclaw',          cat:'agent',  w:6,  desc:'OpenClaw — agent runtime' },
+  { id:'aria-termux',       cat:'agent',  w:5,  desc:'Aria — Termux agent' },
+  { id:'swarm_intel',       cat:'agent',  w:4,  desc:'Swarm intelligence layer' },
+  { id:'datacampus',        cat:'agent',  w:4,  desc:'DataCampus — training env' },
+  { id:'natcommand_nathub', cat:'agent',  w:4,  desc:'NatCommand hub' },
+  // Archive
+  { id:'archive',           cat:'archive',w:6,  desc:'Project bundle archive — Oct 2025, May 2026' },
+  { id:'nemo',              cat:'archive',w:4,  desc:'NEMO astro engine (117M)' },
+  { id:'gemini-cli-termux', cat:'archive',w:5,  desc:'Gemini CLI — 210M, running tonight' },
+  { id:'vertical_local',    cat:'archive',w:4,  desc:'Vertical local dev env' },
+  { id:'zeroclaw_broker',   cat:'archive',w:4,  desc:'ZeroClaw lab broker' },
+];
+
+const COLORS = {
+  core:    '#00ffb4',
+  bridge:  '#ff6b35',
+  loom:    '#a78bfa',
+  osint:   '#f59e0b',
+  saas:    '#60a5fa',
+  agent:   '#f43f5e',
+  archive: '#334155',
+};
+
+const EDGES = [
+  ['CodeCity-Bench','whorl_runtime'],
+  ['CodeCity-Bench','loom_encoder'],
+  ['CodeCity-Bench','thoth_orchestrator'],
+  ['CodeCity-Bench','api_bridge'],
+  ['askhole_autopilot','mrs_higgins_saas'],
+  ['askhole_autopilot','vertical_ai'],
+  ['askhole_autopilot','api_bridge'],
+  ['mrs_higgins_saas','thoth_orchestrator'],
+  ['mrs_higgins_saas','AskHole'],
+  ['vertical_ai','thoth_orchestrator'],
+  ['vertical_ai','openclaw'],
+  ['api_bridge','conductor_shim'],
+  ['api_bridge','panel_connector'],
+  ['api_bridge','platform_adapter'],
+  ['whorl_runtime','whorl_scribe'],
+  ['whorl_runtime','platform_adapter'],
+  ['whorl_runtime','molt_v3_engine'],
+  ['loom_encoder','molt_v3_engine'],
+  ['loom_encoder','fractal_mesh'],
+  ['molt_v3_engine','Molt-V4'],
+  ['Molt-V4','molt_bleak'],
+  ['molt_bleak','fractal_relay'],
+  ['fractal_relay','fractal_mesh'],
+  ['fractal_mesh','propagated_node'],
+  ['conductor_shim','citybridge'],
+  ['citybridge','CodeMentor-MVP'],
+  ['openclaw','motherbrain_boot'],
+  ['openclaw','swarm_intel'],
+  ['motherbrain_boot','datacampus'],
+  ['swarm_intel','propagated_node'],
+  ['thoth_orchestrator','aria-termux'],
+  ['AskHole','hotseat'],
+  ['OSINT-MasterTool','blackbird'],
+  ['OSINT-MasterTool','maigret'],
+  ['OSINT-MasterTool','WebSift'],
+  ['OSINT-MasterTool','tookie-osint'],
+  ['OSINT-MasterTool','ReconDog'],
+  ['archive','nemo'],
+  ['archive','gemini-cli-termux'],
+];
+
+// Physics nodes
+let nodes = [];
+let mouse = { x: W/2, y: H/2 };
+
+async function fetchTopologyData() {
+  const response = await fetch('/api/topology');
+  const data = await response.json();
+  
+  // Transform API data to visualizer node format
+  return Object.entries(data.lexemes).map(([id, lexeme]) => {
+    // Determine category based on label or default to 'loom'
+    const cat = lexeme.label.split(':')[0] || 'loom';
+    // Use complexity metric for size weight if available
+    const complexity = lexeme.metrics.find(m => m.name === 'cyclomatic_complexity')?.value || 5;
+    
+    return {
+      id: id,
+      cat: cat,
+      w: Math.min(Math.max(complexity, 2), 10), // Clamp weight
+      desc: lexeme.label
+    };
+  });
+}
+
+async function initNodes() {
+  const rawData = await fetchTopologyData();
+  const cx = W/2, cy = H/2;
+  nodes = rawData.map((r, i) => {
+    const angle = (i / rawData.length) * Math.PI * 2;
+    const dist = 80 + Math.random() * 200;
+    return {
+      ...r,
+      x: cx + Math.cos(angle) * dist,
+      y: cy + Math.sin(angle) * dist,
+      vx: 0, vy: 0,
+      r: 4 + r.w * 1.8,
+      color: COLORS[r.cat] || COLORS['loom'],
+    };
+  });
+  
+  // Update HUD
+  document.getElementById('s-nodes').textContent = nodes.length;
+}
+
+function getNode(id) { return nodes.find(n => n.id === id); }
+
+// Force directed
+function tick() {
+  const cx = W/2, cy = H/2;
+  
+  // Repulsion
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i+1; j < nodes.length; j++) {
+      const a = nodes[i], b = nodes[j];
+      const dx = a.x - b.x, dy = a.y - b.y;
+      const d = Math.sqrt(dx*dx+dy*dy) || 1;
+      const f = 2200 / (d*d);
+      const fx = dx/d*f, fy = dy/d*f;
+      a.vx += fx; a.vy += fy;
+      b.vx -= fx; b.vy -= fy;
+    }
+  }
+
+  // Attraction along edges
+  EDGES.forEach(([aid, bid]) => {
+    const a = getNode(aid), b = getNode(bid);
+    if (!a || !b) return;
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const d = Math.sqrt(dx*dx+dy*dy) || 1;
+    const f = (d - 120) * 0.015;
+    const fx = dx/d*f, fy = dy/d*f;
+    a.vx += fx; a.vy += fy;
+    b.vx -= fx; b.vy -= fy;
+  });
+
+  // Center gravity
+  nodes.forEach(n => {
+    n.vx += (cx - n.x) * 0.003;
+    n.vy += (cy - n.y) * 0.003;
+    n.vx *= 0.82;
+    n.vy *= 0.82;
+    n.x += n.vx;
+    n.y += n.vy;
+    // Bounds
+    n.x = Math.max(n.r+20, Math.min(W-n.r-20, n.x));
+    n.y = Math.max(n.r+20, Math.min(H-n.r-20, n.y));
+  });
+}
+
+let hovered = null;
+let frame = 0;
+
+function draw() {
+  ctx.clearRect(0,0,W,H);
+
+  // Background grid
+  ctx.strokeStyle = 'rgba(0,255,180,0.04)';
+  ctx.lineWidth = 1;
+  const gs = 60;
+  for (let x = 0; x < W; x += gs) {
+    ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke();
+  }
+  for (let y = 0; y < H; y += gs) {
+    ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
+  }
+
+  // Edges
+  EDGES.forEach(([aid, bid]) => {
+    const a = getNode(aid), b = getNode(bid);
+    if (!a || !b) return;
+    const isHot = hovered && (hovered.id === aid || hovered.id === bid);
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    if (isHot) {
+      ctx.strokeStyle = 'rgba(0,255,180,0.6)';
+      ctx.lineWidth = 1.5;
+    } else {
+      ctx.strokeStyle = 'rgba(0,255,180,0.08)';
+      ctx.lineWidth = 0.8;
+    }
+    ctx.stroke();
+  });
+
+  // Nodes
+  nodes.forEach(n => {
+    const isHot = hovered && hovered.id === n.id;
+    const pulse = Math.sin(frame * 0.04 + n.x * 0.01) * 0.3 + 0.7;
+
+    // Glow
+    const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * (isHot ? 3.5 : 2.5));
+    grd.addColorStop(0, n.color + 'cc');
+    grd.addColorStop(1, n.color + '00');
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r * (isHot ? 3.5 : 2.5) * pulse, 0, Math.PI*2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    // Node circle
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r * (isHot ? 1.3 : 1), 0, Math.PI*2);
+    ctx.fillStyle = n.color;
+    ctx.fill();
+
+    // Ring for big nodes
+    if (n.w >= 6) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r + 4, 0, Math.PI*2);
+      ctx.strokeStyle = n.color + '44';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Label
+    const showLabel = isHot || n.w >= 7 || (n.w >= 5 && frame % 180 < 90);
+    if (showLabel) {
+      ctx.font = isHot ? 'bold 11px Share Tech Mono' : '9px Share Tech Mono';
+      ctx.fillStyle = isHot ? '#ffffff' : n.color + 'cc';
+      ctx.textAlign = 'center';
+      ctx.fillText(n.id.replace(/_/g,' ').toUpperCase().substring(0,18), n.x, n.y - n.r - 5);
+    }
+  });
+
+  // Crosshair on hovered
+  if (hovered) {
+    ctx.strokeStyle = hovered.color + '88';
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([4,8]);
+    ctx.beginPath(); ctx.moveTo(hovered.x, 0); ctx.lineTo(hovered.x, H); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, hovered.y); ctx.lineTo(W, hovered.y); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  frame++;
+}
+
+function loop() {
+  tick();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+// Mouse
+canvas.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  hovered = null;
+  for (const n of nodes) {
+    const dx = e.clientX - n.x, dy = e.clientY - n.y;
+    if (Math.sqrt(dx*dx+dy*dy) < n.r + 10) { hovered = n; break; }
+  }
+  const tt = document.getElementById('tooltip');
+  if (hovered) {
+    document.getElementById('tt-name').textContent = hovered.id.replace(/_/g,' ').toUpperCase();
+    document.getElementById('tt-meta').innerHTML = 
+      `TYPE: ${hovered.cat.toUpperCase()}<br>MASS: ${hovered.w}/10<br>${hovered.desc}`;
+    tt.style.display = 'block';
+    tt.style.left = (e.clientX + 16) + 'px';
+    tt.style.top = (e.clientY - 20) + 'px';
+  } else {
+    tt.style.display = 'none';
+  }
+});
+
+canvas.addEventListener('click', e => {
+  if (!hovered) return;
+  const ping = document.createElement('div');
+  ping.className = 'ping';
+  ping.style.cssText = `left:${hovered.x-20}px;top:${hovered.y-20}px;width:40px;height:40px;border:2px solid ${hovered.color};`;
+  document.body.appendChild(ping);
+  setTimeout(() => ping.remove(), 1000);
+  
+  // Interactive navigation / execution request
+  addFeed(`> REQUESTING ACCESS: ${hovered.id.toUpperCase()}`);
+  fetch(`/api/interact?id=${encodeURIComponent(hovered.id)}`)
+    .then(r => r.json())
+    .then(data => addFeed(`> ${data.message}`));
+});
+
+// Stats
+document.getElementById('s-nodes').textContent = RAW.length;
+document.getElementById('s-edges').textContent = EDGES.length;
+
+// Console feed
+const FEED_MSGS = [
+  '> LOOM ENGINE INITIALIZED',
+  '> SCANNING ROOTBASE...',
+  '> 47 LEXEMES MAPPED',
+  '> TOPOLOGY SIGNATURE: weave-v1-47',
+  '> BRIDGE NODES DETECTED: 7',
+  '> OSINT CLUSTER: ACTIVE',
+  '> WHORL RUNTIME: PORTABLE',
+  '> MOLT v4 CONNECTED',
+  '> ASKHOLE AUTOPILOT: IDLE',
+  '> CODEMENTOR SAAS: STAGED',
+  '> MOTHERBRAIN: LISTENING',
+  '> FORCE LAYOUT: CONVERGING',
+  '> COMPLEXITY DELTA: 0.82',
+  '> SCRIBE DENSITY: 0.34',
+  '> TELEMETRY BRIDGE: OPEN',
+];
+
+let feedIdx = 0;
+function addFeed(msg) {
+  const el = document.getElementById('console-feed');
+  const line = document.createElement('div');
+  line.className = 'feed-line';
+  line.textContent = msg;
+  el.appendChild(line);
+  if (el.children.length > 6) el.removeChild(el.firstChild);
+}
+
+function autoFeed() {
+  addFeed(FEED_MSGS[feedIdx % FEED_MSGS.length]);
+  feedIdx++;
+  setTimeout(autoFeed, 1800 + Math.random() * 1200);
+}
+
+initNodes().then(() => {
+  loop();
+  setTimeout(autoFeed, 800);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+=== Mrs. Higgins Run: 2026-06-18_11-44-10 ===
+
+[LOADED] askhole.json
+[LOADED] askhole_ai.json
+[LOADED] code_city_apocalypse.json
+[LOADED] code_city_blue_beta.json
+[LOADED] hotseat.json
+[LOADED] molt_engine.json
+[LOADED] syntax_ai_cli.json
+[LOADED] truthsleuth.json
+[LOADED] vertical_ai.json
+
+=== Mrs. Higgins ON DUTY [LIVE] — 9 package(s) ===
+
+[ROUTING] AskHole
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+  [OK] → Nostr
+
+[ROUTING] AskHole AI Assistant
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Code City Apocalypse Scanner
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Code City Blue Beta Access
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] HotSeat
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Fiverr
+  [MANUAL] → Upwork
+
+[ROUTING] Molt Automation Engine
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [MANUAL] → Upwork
+
+[ROUTING] Syntax AI CLI
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [MANUAL] → Upwork
+
+[ROUTING] TruthSleuth Static Analysis Auditor
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [OK] → Nostr
+  [MANUAL] → Fiverr
+
+[ROUTING] Vertical AI
+  [Voltage] Error: <urlopen error [Errno 7] No address associated with hostname>
+  [Voltage] No invoice — falling back to static address
+  [MANUAL] → Upwork
+  [OK] → Nostr
+
+[DONE] 19 route(s) logged → front_desk_routing_log.json

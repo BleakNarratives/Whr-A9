@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+import sys
+import os
+import json
+import urllib.request
+import urllib.error
+
+API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+MAX_DEPTH = int(os.getenv("MOLT_MAX_DEPTH", "3"))
+
+def query_model(prompt):
+    if not API_KEY:
+        print("[Error] OPENROUTER_API_KEY is not set.", file=sys.stderr)
+        sys.exit(1)
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json",
+        "X-Title": "Molt Engine"
+    }
+    
+    payload = {
+        "model": "stealth/ox-alpha",
+        "messages": [
+            {"role": "system", "content": "You are a recursive logic and code refactoring engine."},
+            {"role": "user", "content": prompt}
+        ]
+    }
+    req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers, method='POST')
+    try:
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            return data['choices'][0]['message']['content']
+    except urllib.error.HTTPError as e:
+        print(f"[Error] API request failed: {e.read().decode('utf-8')}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    prompt = sys.stdin.read() if not sys.stdin.isatty() else " ".join(sys.argv[1:])
+    if not prompt:
+        print("Usage: echo 'prompt' | molt OR molt 'prompt'", file=sys.stderr)
+        sys.exit(1)
+    print(query_model(prompt))

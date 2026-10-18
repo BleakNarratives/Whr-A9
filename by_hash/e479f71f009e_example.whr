@@ -1,0 +1,14 @@
+WHORL VERSION 0.1
+FIELD N = 256 PHI_H = 0.7854
+
+LET c = 1.0
+
+SPAWN agent_wave AT 32
+    AMPLITUDE = 1.0
+    PHASE = 0.0
+
+LEARN agent_wave
+    STEPS = 10
+    USING LINEAR
+
+OBSERVE agent_wave AT 64 -> AMPLITUDE, PHASE

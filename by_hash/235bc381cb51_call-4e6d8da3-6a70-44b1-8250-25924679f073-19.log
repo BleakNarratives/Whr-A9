@@ -1,0 +1,56 @@
+-rw-rw----. 1 u0_a233 media_rw 1288 Jul 26 00:07 /storage/emulated/0/RootBase/src/OutClaw/_ingest_stage/full_extract/outclaw/OutClaw/__pycache__/model_spar_simulator.cpython-314.pyc
+ok
+skip 16 ok /storage/emulated/0/RootBase/OutClaw/model_spar_simulator.py
+names ('json', 'ModelSparSimulator', '__name__', 'simulator', 'print', 'dumps', 'simulate_reaction')
+consts types ['int', 'NoneType', 'code', 'str', 'str', 'str', 'str', 'tuple']
+<module> args=0 locals=()
+  ModelSparSimulator args=0 locals=()
+    __init__ args=2 locals=('self', 'model_name')
+    simulate_reaction args=2 locals=('self', 'target')
+==== cloud recent zip-ish under Convergence + ready + Codeshitty ====
+   721854 2026-07-27 10:41:56.963000000 outclaw_full.zip
+      775 2026-07-21 12:41:33.728000000 Phase01_Archive/README.md
+        9 2026-07-03 06:52:29.000000000 Phase01_Archive/test_whorl_1.txt
+     9359 2026-06-29 09:37:57.996000000 Phase01_DevArchive/DO_THIS_MEATSUIT.txt
+    13480 2026-06-29 13:58:50.212000000 Phase01_DevArchive/KIMI_ON_VACANT_MIKEY_SESSION.txt
+     2913 2026-07-10 09:21:32.570000000 Phase01_DevArchive/MRD.txt
+  1055875 2026-07-03 09:27:51.000000000 Phase01_DevArchive/Official-Vertical-AI-Boardroom.zip
+     3561 2026-07-06 09:51:03.077000000 Phase01_DevArchive/SMUG-GESTIONS.txt
+   357659 2026-07-27 10:31:20.195000000 outclaw/outclaw.zip
+====
+AI Hero's Code Betrayal Catastrophe.zip
+KeyMaster.zip
+ConvergenceIngestion/outclaw_full.zip
+ChAImeleon/ChAImeleon.zip
+ChAImeleon/ChAImeleon_Code_Rabbit.zip
+ChAImeleon/chaimeleon-ai-code-reviewer.zip
+Juris-Swarm/Official-Vertical-AI-Boardroom.zip
+Veritas_Project_Backup/project_dump.zip
+==== Phase01_DevArchive ====
+DO_THIS_MEATSUIT.txt
+KIMI_ON_VACANT_MIKEY_SESSION.txt
+MRD.txt
+Official-Vertical-AI-Boardroom.zip
+SMUG-GESTIONS.txt
+2026-07-20_audit_dumps/
+README.md
+test_whorl_1.txt
+* main
+  master
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+ed7cd3c feat: add Hermes transition documentation and image
+532aac4 cleanup: remove obsolete documentation files from docs/ directory
+7b68460 cleanup: delete remaining docs/ files (ADB-BRIDGE, LOCAL-LLM, USE-CASES)
+9fa7cc4 cleanup: delete docs/SETUP.md (moved to root)
+ba96a99 cleanup: remove old docs/ folder files (moved to root)
+total 6472
+-rw-rw----. 1 u0_a233 media_rw 3041437 Jul 28 12:00 IMG_0342.JPG
+-rw-rw----. 1 u0_a233 media_rw 3560520 Jul 28 12:00 IMG_0724.JPG
+-rw-rw----. 1 u0_a233 media_rw   12612 Jul 28 12:00 hermes.png
+OutClaw/LEGAL_ASSASSIN_MANIFESTO.md
+OutClaw/study/hermes_server.py
+_ingest_stage/full_extract/outclaw/OutClaw/LEGAL_ASSASSIN_MANIFESTO.md
+_ingest_stage/full_extract/outclaw/OutClaw/study/hermes_server.py
+_ingest_stage/nested_extract/outclaw/OutClaw/LEGAL_ASSASSIN_MANIFESTO.md
+_ingest_stage/nested_extract/outclaw/OutClaw/study/hermes_server.py
